@@ -14,48 +14,77 @@ main {
     height: 100vh;
 }
 
-#background_video{
+#background_container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#background_video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     position: absolute;
+}
 
+#video_overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px) brightness(0.90);
+}
+
+#logo_x {
+    position: absolute;
+    margin-top: -420px;
+    margin-left: 380px;
+    max-width: 250px;
+    z-index: 2;
+    cursor: pointer;
+    filter: drop-shadow(5px 5px 5px black);
+    transition: 0.2s ease-in-out;
+    animation: fade-in 0.5s ease-in-out;
+}
+
+#logo_x:hover {
+    filter: drop-shadow(10px 10px 10px black);
+    transform: scale(1.1);
 }
 
 #container {
     position: relative;
     width: 400px;
-    height: 390px;
-    box-shadow: 0 0 15px rgb(13, 114, 255);
+    height: 440px;
     padding: 40px;
     border-radius: 20px;
     color: white;
-    backdrop-filter: blur(20px);
-}
-
-#logo_login{
-    transition: 0.2s ease-in-out;
-    margin-bottom: 40px;
-}
-
-#logo_login:hover{
-    filter: drop-shadow(0 0 1px black);
-    transition: 0.2s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 80px 5px #0d72ff;
+    border: 1px solid #0d72ff;
+    backdrop-filter: blur(40px) brightness(0.70);
+    z-index: 1;
+    overflow: hidden;
+    animation: fade-in 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 #form_login {
     display: flex;
     flex-direction: column;
+    position: relative;
+    transition: left 0.5s ease-in-out;
+    left: 0;
 }
 
-#form_login #email_login,
-#form_login #senha_login {
-    padding: 8px;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    margin-top: 35px;
-    background-color: rgb(13, 114, 255);
+#form_login h1 {
+    margin-top: 30px;
+    transition: 0.2s ease-in-out;
+    max-width: max-content;
+}
+
+#form_login h1:hover {
+    text-shadow: 2px 2px 1px #0d72ff;
 }
 
 #form_login #esqueci_senha {
@@ -63,18 +92,159 @@ main {
     margin-top: 30px;
     color: white;
     max-width: max-content;
-}
-
-#form_login #entrar_login {
-    margin-top: 30px;
-    padding: 10px;
-    border-radius: 30px;
-    border: none;
-    cursor: pointer;
+    position: relative;
     transition: 0.2s ease-in-out;
 }
 
-#form_login #entrar_login:hover {
-    background-color: rgb(13, 114, 255);
+#form_login #esqueci_senha::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 10%;
+    background-color: #0d72ff;
+    transition: 0.2s ease-in-out;
+}
+
+#form_login #esqueci_senha:hover::after {
+    width: 110%;
+}
+
+#form_login button {
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    border: none;
+}
+
+#form_login button:hover {
+    background-color: #0d72ff;
     color: white;
+}
+
+.inputbox {
+    position: relative;
+    margin-top: 30px;
+}
+
+.inputbox input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #0d72ff;
+    border-radius: 15px;
+    outline: none;
+    color: white;
+    font-size: 1rem;
+    background-color: #0D274F;
+}
+
+.inputbox span {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1rem;
+    color: white;
+    transition: 0.2s;
+}
+
+.inputbox input:valid~span,
+.inputbox input:focus~span {
+    color: #0d72ff;
+    transform: translateX(10px) translateY(-19px);
+    background: #0D274F;
+    font-size: 0.90rem;
+    padding: 0 10px;
+    border-right: 1px solid #0d72ff;
+    border-left: 1px solid #0d72ff;
+}
+
+.inputbox input:valid,
+.inputbox input:focus {
+    border: 1px solid #0d72ff;
+}
+
+
+/* ESQUECI SENHA */
+/* ESQUECI SENHA */
+/* ESQUECI SENHA */
+/* ESQUECI SENHA */
+/* ESQUECI SENHA */
+/* ESQUECI SENHA */
+/* ESQUECI SENHA */
+/* ESQUECI SENHA */
+/* ESQUECI SENHA */
+
+#form_esqueci_senha {
+    display: flex;
+    flex-direction: column;
+    top: 450px;
+    position: relative;
+    transition: top 0.5s ease-in-out;
+}
+
+#form_esqueci_senha h1 {
+    margin-top: 30px;
+    transition: 0.2s ease-in-out;
+    max-width: max-content;
+}
+
+#form_esqueci_senha h1:hover {
+    text-shadow: 2px 2px 1px #0d72ff;
+}
+
+#form_esqueci_senha button {
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    border: none;
+}
+
+#form_esqueci_senha button:hover {
+    background-color: #0d72ff;
+    color: white;
+}
+
+#form_esqueci_senha #voltar {
+    width: 20%;
+    margin: 0;
+    padding: 5px;
+    align-self: flex-end;
+}
+
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes moverERodar {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(-380px) rotate(360deg);
+    }
+
+}
+
+@keyframes voltar {
+    0% {
+        transform: translateX(-380px) rotate(360deg);
+    }
+
+    100% {
+        transform: translateX(0) rotate(0deg);
+    }
 }

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_1" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: url(#Gradiente_sem_nome_26);
+      }
+
+      .cls-1, .cls-2 {
+        stroke-miterlimit: 10;
+        stroke-width: 24px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: url(#Gradiente_sem_nome_18);
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        stroke-width: 0px;
+      }
+
+      .cls-4 {
+        fill: #3168e6;
+      }
+
+      .cls-5 {
+        fill: #1653b2;
+      }
+    </style>
+    <linearGradient id="Gradiente_sem_nome_26" data-name="Gradiente sem nome 26" x1="101.24" y1="250.54" x2="407.16" y2="250.54" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#004185"/>
+      <stop offset="0" stop-color="#004186"/>
+      <stop offset=".23" stop-color="#1652b1"/>
+      <stop offset=".44" stop-color="#265fd2"/>
+      <stop offset=".65" stop-color="#3269e9"/>
+      <stop offset=".84" stop-color="#396ff8"/>
+      <stop offset="1" stop-color="#3c71fd"/>
+    </linearGradient>
+    <linearGradient id="Gradiente_sem_nome_18" data-name="Gradiente sem nome 18" x1="101.26" y1="249.5" x2="410.87" y2="249.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3c71fd"/>
+      <stop offset=".48" stop-color="#1f5ac4"/>
+      <stop offset="1" stop-color="#004185"/>
+    </linearGradient>
+  </defs>
+  <g id="LOGO">
+    <rect class="cls-3" width="500" height="500"/>
+    <path class="cls-1" d="m292.11,147.88c7.45-10.63,20.64-29.43,20.64-29.43.95-1.35,3.07-2.42,4.72-2.38l75.99,1.85c1.65.04,2.2,1.16,1.21,2.48l-194.31,262.19c-.98,1.33-3.14,2.41-4.79,2.41h-80.62c-1.65,0-2.21-1.09-1.24-2.43,0,0,62.64-86.57,94.84-131.07"/>
+    <path class="cls-2" d="m200.77,118.38c-1-1.31-3.17-2.33-4.82-2.26,0,0-40.31,1.7-62.82,1.87-7.12.05-18.17.01-18.17.01-1.65,0-2.19,1.07-1.2,2.39l195.19,260.22c.99,1.32,3.15,2.34,4.8,2.27l83.45-3.72c1.65-.07,2.18-1.21,1.17-2.52L200.77,118.38Z"/>
+    <ellipse class="cls-5" cx="275.62" cy="165.93" rx="10.63" ry="11.37"/>
+    <path class="cls-4" d="m282.29,140.47c-2.5,4.9-2.03,10.61,1.11,14.2,4.2,4.81,12.82,5.38,18.74,0l-19.85-14.2Z"/>
+  </g>
+</svg>
