@@ -1,19 +1,65 @@
 <!DOCTYPE html>
-<html lang="Pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/inicio.css">
-    <script src="../js/inicio.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
-    <title>Início</title>
-</head>
-
-<body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-</body>
-
+<!-- Coding by CodingNepal || www.codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hoverable Sidebar Menu HTML CSS & JavaScript</title>
+    <link rel="stylesheet" href="style.css" />
+    <link flex href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <script src="./js/inicio.js" defer></script>
+  </head>
+  <body>
+    <nav class="sidebar locked">
+      <div class="logo_items flex">
+        <span class="nav_image">
+            <img id="logoSidebar" src="./img/DEV EXPERIENCE V2 TRANSPARENTE SVG.svg" alt="logo_img" />
+          </span>          
+        <i class="bx bx-lock-alt" id="lock-icon" title="Unlock Sidebar"></i>
+        <i class="bx bx-x" id="sidebar-close"></i>
+      </div>
+      <div class="menu_container">
+        <div class="menu_items">
+          <ul class="menu_item">
+            <div class="menu_title flex">
+              <span class="title">Dashboard</span>
+              <span class="line"></span>
+            </div>
+            <li class="item">
+              <a href="#" class="link flex">
+                <i class="bx bx-home-alt"></i>
+                <span>Overview</span>
+              </a>
+            </li>
+            <li class="item">
+              <a href="#" class="link flex">
+                <i class="bx bx-grid-alt"></i>
+                <span>All Projects</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="menu_item">
+            <div class="menu_title flex">
+              <span class="title">Editor</span>
+              <span class="line"></span>
+            </div>
+            <li class="item">
+              <a href="#" class="link flex">
+                <i class="bx bxs-magic-wand"></i>
+                <span>Magic Build</span>
+              </a>
+            </li>
+            <li class="item">
+              <a href="#" class="link flex">
+                <i class="bx bx-folder"></i>
+                <span>New Projects</span>
+              </a>
+            </li>
+        </div>
+      </div>
+    </nav>
+      </span>
+    </nav>
+  </body>
 </html>
