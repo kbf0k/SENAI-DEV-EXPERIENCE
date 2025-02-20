@@ -39,7 +39,7 @@ main {
     position: absolute;
     margin-top: -420px;
     margin-left: 380px;
-    max-width: 250px;
+    max-width: 150px;
     z-index: 2;
     cursor: pointer;
     filter: drop-shadow(5px 5px 5px black);
@@ -81,10 +81,6 @@ main {
     margin-top: 30px;
     transition: 0.2s ease-in-out;
     max-width: max-content;
-}
-
-#form_login h1:hover {
-    text-shadow: 2px 2px 1px #0d72ff;
 }
 
 #form_login #esqueci_senha {
@@ -190,10 +186,6 @@ main {
     margin-top: 30px;
     transition: 0.2s ease-in-out;
     max-width: max-content;
-}
-
-#form_esqueci_senha h1:hover {
-    text-shadow: 2px 2px 1px #0d72ff;
 }
 
 #form_esqueci_senha button {
