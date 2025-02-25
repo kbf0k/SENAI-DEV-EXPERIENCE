@@ -78,3 +78,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+const sidebar = document.querySelector(".sidebar");
+const logoFechada = document.getElementById("logoSidebar");
+const logoAberta = document.getElementById("logoSidebarOpen");
+
+
+logoAberta.style.display = "none";
+
+
+sidebar.addEventListener("mouseenter", () => {
+    logoFechada.style.display = "none";
+    logoAberta.style.display = "block";
+});
+
+
+sidebar.addEventListener("mouseleave", () => {
+    logoFechada.style.display = "block";
+    logoAberta.style.display = "none";
+});
+
+
