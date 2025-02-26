@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="../img/logo_x.svg" type="image/x-icon">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
-    <title>Edições</title>
+    <title>Sobre</title>
 </head>
 
 <body>
