@@ -35,20 +35,28 @@
     </nav>
     <main>
         <secion class="section_apoiadores">
-            <img id="fundo" src="../img/FUNDO BACKGROUND_APOIADORES.svg" alt="FUNDO_BACKGROUND">
+            <!-- <img src="../img/BANNER_APOIADORES.png" id="BANNER_APOIADORES" alt=""> -->
+            <img id="fundo" src="../img/fundo_png_bom.png" alt="FUNDO_BACKGROUND">
             <h1>APOIADORES</h1>
-            <div class="apoiadores">
-                <div class="card" id="LOGO_YOUTAN">
-                    <img src="../img/LOGO_YOUTAN.svg" alt="LOGO_YOUTAN">
+            <p>Agradecemos imensamente o apoio de nossos patrocinadores, cuja contribuição foi essencial para a realização deste evento. Queremos expressar nossa profunda gratidão aos parceiros do Senai Dev Experience, que desempenharam um papel fundamental em proporcionar uma experiência enriquecedora e inspiradora para nossos alunos.</p>
+            <div class="card" id="LOGO_YOUTAN">
+                <div class="moldura">
+                    <a href="https://youtan.com.br/" target="_blank"><img src="../img/LOGO_YOUTAN.svg" class="imagem_cover" alt="LOGO_YOUTAN"></a>
                 </div>
-                <div class="card" id="LOGO_DEEPESG">
-                    <img src="../img/LOGO_DEEPESG.svg" alt="LOGO_DEEPESG">
+            </div>
+            <div class="card" id="LOGO_AAPM">
+                <div class="moldura">
+                    <a href="https://sp.senai.br/" target="_blank"><img src="../img/LOGO_AAPM.svg" class="imagem_cover" alt="LOGO_AAPM"></a>
                 </div>
-                <div class="card" id="LOGO_MAIA">
-                    <img src="../img/LOGO_MA.IA.svg" alt="LOGO_MA.IA">
+            </div>
+            <div class="card" id="LOGO_DEEPESG">
+                <div class="moldura">
+                    <a href="https://deepesg.com/" target="_blank"><img src="../img/LOGO_DEEPESG.svg" class="imagem_cover" alt="LOGO_DEEPESG"></a>
                 </div>
-                <div class="card" id="LOGO_AAPM">
-                    <img src="../img/LOGO_AAPM.svg" alt="LOGO_AAPM">
+            </div>
+            <div class="card" id="LOGO_MA-IA">
+                <div class="moldura">
+                    <a href="https://maia.solutions/" target="_blank"><img src="../img/LOGO_MA.IA.svg" class="imagem_cover" alt="LOGO_MA.IA"></a>
                 </div>
             </div>
         </secion>
@@ -71,7 +79,12 @@
             </div>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <p id="titulo_senai">&copy; SENAI DEV EXPERIENCE</p>
+        <p>O conteúdo do site não pode ser editado, copiado ou distribuído sem expressa autorização do SENAI-SP.</p>
+        <p>Escola e Faculdade SENAI Félix Guisard.</p>
+        <p>Desenvolvido por &copy; SOFTDEV</p>
+    </footer>
 </body>
 
 </html>

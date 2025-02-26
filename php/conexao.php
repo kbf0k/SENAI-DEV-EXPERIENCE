@@ -1,12 +1,12 @@
 <?php
 
-// $dbhost = 'localhost';
-// $dbname = 'senai';
-// $dbuser = 'root';
-// $dbpassword = '';
+$dbhost = "localhost";
+$dbuser = "root";
+$dbpassword = "";
+$dbname = "db_dev";
 
-// $conexao = mysqli_connect($dbhost, $dbname, $dbuser, $dbpassword);
+$conexao = mysqli_connect($dbhost, $dbuser, $dbpassword, $dbname);
 
-// if (!$conexao) {
-//     die('A conexão falhou' . mysqli_connect_errno());
-// }
+if (!$conexao) {
+    die('A conexão falhou' . mysqli_connect_errno());
+}

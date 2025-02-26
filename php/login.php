@@ -1,24 +1,27 @@
 <?php
-include_once('conexao.php');
+include('conexao.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email_login = $_POST['email_login_digitado'];
     $senha_login = $_POST['senha_login_digitado'];
 
-    $stmt = $conexao->prepare("SELECT * FROM usuarios WHERE email_usuario = ?");
+    $stmt = $conexao->prepare("SELECT * FROM usuario WHERE email_usuario = ?");
     $stmt->bind_param('s', $email_login);
     $stmt->execute();
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
         $usuario_logado = $result->fetch_assoc();
-        if (password_verify($senha_login, $usuario_logado['senha_usuario'])) {
-            session_start();
-            $_SESSION['id_sessao'] = $usuario_logado['id_aluno'];
-            $_SESSION['nome_sessao'] = $usuario_logado['nome_aluno'];
-            header('Location: inicio.php');
-            exit();
-        }
+        // if (password_verify($senha_login, $usuario_logado['senha_usuario'])) {
+        session_start();
+        $_SESSION['id_sessao'] = $usuario_logado['id_usuario'];
+        $_SESSION['nome_sessao'] = $usuario_logado['nome_usuario'];
+        header('Location: inicio.php');
+        exit();
+    } else {
+        echo 'DEU MERDA';
+        header('Location: login.php');
+        exit();
     }
 }
 
@@ -47,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
         <img id="logo_x" src="../img/LOGO_X.svg" alt="LOGO_X">
         <div id="container">
-            <form action="POST" method="POST" id="form_login">
+            <form method="POST" id="form_login">
                 <h1>Entrar</h1>
 
                 <div class="inputbox">
