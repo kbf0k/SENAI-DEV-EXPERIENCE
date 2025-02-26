@@ -1,3 +1,29 @@
+<?php
+include_once('conexao.php');
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $email_login = $_POST['email_login_digitado'];
+    $senha_login = $_POST['senha_login_digitado'];
+
+    $stmt = $conexao->prepare("SELECT * FROM usuarios WHERE email_usuario = ?");
+    $stmt->bind_param('s', $email_login);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        $usuario_logado = $result->fetch_assoc();
+        if (password_verify($senha_login, $usuario_logado['senha_usuario'])) {
+            session_start();
+            $_SESSION['id_sessao'] = $usuario_logado['id_aluno'];
+            $_SESSION['nome_sessao'] = $usuario_logado['nome_aluno'];
+            header('Location: inicio.php');
+            exit();
+        }
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="Pt-BR">
 
@@ -19,18 +45,18 @@
             </video>
             <div id="video_overlay"></div>
         </div>
-        <img id="logo_x" src="../img/logo_x.svg" alt="">
+        <img id="logo_x" src="../img/LOGO_X.svg" alt="LOGO_X">
         <div id="container">
             <form action="POST" method="POST" id="form_login">
                 <h1>Entrar</h1>
 
                 <div class="inputbox">
-                    <input type="email" required novalidate>
+                    <input type="email" name="email_login_digitado" required novalidate>
                     <span>Email</span>
                 </div>
 
                 <div class="inputbox">
-                    <input type="password" required novalidate>
+                    <input type="password" name="senha_login_digitado" required novalidate>
                     <span>Senha</span>
                 </div>
 
@@ -38,19 +64,15 @@
                 <button type="submit">Entrar</button>
             </form>
 
-            <form action="POST" method="POST" id="form_esqueci_senha">
+            <form action="enviar_email.php" method="POST" id="form_esqueci_senha">
                 <button id="voltar" type="button">Voltar</button>
                 <h1>Esqueceu senha?</h1>
-                <p>Digite seu email para realizar a troca de senha</p>
+                <p>Digite seu e-mail para receber um link de redefinição de senha.</p>
                 <div class="inputbox">
-                    <input type="email" required novalidate>
+                    <input type="email" name="esqueci_email" required novalidate>
                     <span>Email</span>
                 </div>
 
-                <div class="inputbox">
-                    <input type="password" required novalidate>
-                    <span>Senha</span>
-                </div>
                 <button type="submit">Atualizar</button>
             </form>
         </div>

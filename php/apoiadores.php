@@ -5,14 +5,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/apoiadores.css">
+    <link rel="shortcut icon" href="../img/logo_x.svg" type="image/x-icon">
     <script src="../js/apoiadores.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <title>Apoaidores</title>
 </head>
 
 <body>
-    <header></header>
-    <main></main>
+    <nav class="sidebar">
+        <div class="logo_items flex">
+            <span class="nav_image">
+                <img id="logoSidebar" src="../img/logo_x.svg" alt="logo_fechada" class="logo closed" />
+                <img id="logoSidebarOpen" src="../img/logo_nova_certa.png" alt="logo_aberta" class="logo open" />
+            </span>
+        </div>
+        <div class="menu_container">
+            <ul class="menu_items">
+                <li class="item"><a href="inicio.php" class="link flex"><i class="bx bx-home-alt"></i><span>Início</span></a></li>
+                <li class="item"><a href="sobre.php" class="link flex"><i class="bx bx-info-circle"></i><span>Sobre</span></a></li>
+                <li class="item"><a href="ranking.php" class="link flex"><i class="bx bx-trophy"></i><span>Ranking</span></a></li>
+                <li class="item"><a href="edicoes.php" class="link flex"><i class="bx bx-calendar"></i><span>Edições</span></a></li>
+                <li class="item"><a href="apoiadores.php" class="link flex"><i class="bx bx-group"></i><span>Apoiadores</span></a></li>
+                <li class="item"><a href="galeira.php" class="link flex"><i class="bx bx-photo-album"></i><span>Galeria</span></a></li>
+                <li class="item"><a href="login.php" class="link flex"><i class="bx bx-key"></i><span>Entrar</span></a></li>
+                <!-- <li class="item"><a href="../php/login.php" class="link flex"><i class="bx bx-log-out"></i><span>Logout</span></a></li> -->
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <secion class="section_apoiadores">
+            <img id="fundo" src="../img/FUNDO BACKGROUND_APOIADORES.svg" alt="FUNDO_BACKGROUND">
+            <h1>APOIADORES</h1>
+            <div class="apoiadores">
+                <div class="card" id="LOGO_YOUTAN">
+                    <img src="../img/LOGO_YOUTAN.svg" alt="LOGO_YOUTAN">
+                </div>
+                <div class="card" id="LOGO_DEEPESG">
+                    <img src="../img/LOGO_DEEPESG.svg" alt="LOGO_DEEPESG">
+                </div>
+                <div class="card" id="LOGO_MAIA">
+                    <img src="../img/LOGO_MA.IA.svg" alt="LOGO_MA.IA">
+                </div>
+                <div class="card" id="LOGO_AAPM">
+                    <img src="../img/LOGO_AAPM.svg" alt="LOGO_AAPM">
+                </div>
+            </div>
+        </secion>
+        <section class="patrocinadores">
+            <h1>SEJA UM PATROCINADOR</h1>
+
+            <div class="cards">
+                <div class="card_patrocinadores">
+                    <h1>Agradecimentos</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere qui dolore hic magni? Fuga, perferendis explicabo dolorem fugiat, vitae saepe corporis, nam ipsa repellat eum numquam delectus voluptates earum fugit.</p>
+                </div>
+                <div class="card_patrocinadores">
+                    <h1>Reconhecimento</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere qui dolore hic magni? Fuga, perferendis explicabo dolorem fugiat, vitae saepe corporis, nam ipsa repellat eum numquam delectus voluptates earum fugit.</p>
+                </div>
+                <div class="card_patrocinadores">
+                    <h1>Sla man</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere qui dolore hic magni? Fuga, perferendis explicabo dolorem fugiat, vitae saepe corporis, nam ipsa repellat eum numquam delectus voluptates earum fugit.</p>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer></footer>
 </body>
 
