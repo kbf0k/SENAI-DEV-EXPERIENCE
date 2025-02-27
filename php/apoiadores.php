@@ -40,22 +40,22 @@
             <h1>APOIADORES</h1>
             <p>Agradecemos imensamente o apoio de nossos patrocinadores, cuja contribuição foi essencial para a realização deste evento. Queremos expressar nossa profunda gratidão aos parceiros do Senai Dev Experience, que desempenharam um papel fundamental em proporcionar uma experiência enriquecedora e inspiradora para nossos alunos.</p>
             <div class="card" id="LOGO_YOUTAN">
-                <div class="moldura">
+                <div class="moldura_YOUTAN">
                     <a href="https://youtan.com.br/" target="_blank"><img src="../img/LOGO_YOUTAN.svg" class="imagem_cover" alt="LOGO_YOUTAN"></a>
                 </div>
             </div>
             <div class="card" id="LOGO_AAPM">
-                <div class="moldura">
+                <div class="moldura_AAPM">
                     <a href="https://sp.senai.br/" target="_blank"><img src="../img/LOGO_AAPM.svg" class="imagem_cover" alt="LOGO_AAPM"></a>
                 </div>
             </div>
             <div class="card" id="LOGO_DEEPESG">
-                <div class="moldura">
+                <div class="moldura_DEEPESG">
                     <a href="https://deepesg.com/" target="_blank"><img src="../img/LOGO_DEEPESG.svg" class="imagem_cover" alt="LOGO_DEEPESG"></a>
                 </div>
             </div>
-            <div class="card" id="LOGO_MA-IA">
-                <div class="moldura">
+            <div class="card" id="LOGO_MAIA">
+                <div class="moldura_MAIA">
                     <a href="https://maia.solutions/" target="_blank"><img src="../img/LOGO_MA.IA.svg" class="imagem_cover" alt="LOGO_MA.IA"></a>
                 </div>
             </div>

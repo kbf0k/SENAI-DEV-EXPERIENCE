@@ -319,7 +319,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: perspective(10000px) translateY(9%) translateX(-210%) rotateX(35deg) rotateY(-11deg);
+    transform: perspective(10000px) translateY(9%) translateX(-200%) rotateX(35deg) rotateY(-11deg);
     z-index: 1;
     transition: 0.2s ease-in-out;
 }
@@ -348,48 +348,68 @@
     transition: 0.2s ease-in-out;
 }
 
-#LOGO_MA-IA {
+#LOGO_MAIA {
     width: var(--card-width);
     height: var(--card-height);
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: perspective(10000px) translateY(28%) translateX(175%) rotateX(35deg) rotateY(1deg);
+    transform: perspective(10000px) translateY(28%) translateX(165%) rotateX(55deg);
     z-index: 1;
     transition: 0.2s ease-in-out;
 }
 
+.card:hover .imagem_cover {
+    width: 220px;
+}
+
+.card:hover .moldura_YOUTAN {
+    transform: translateY(-45%) rotateX(0deg) rotateY(0deg);
+}
+
+.card:hover .moldura_AAPM {
+    transform: translateY(-25%) rotateX(0deg) rotateY(0deg);
+}
+
+.card:hover .moldura_DEEPESG {
+    transform: translateY(-35%) rotateX(0deg) rotateY(0deg);
+}
+
+.card:hover .moldura_MAIA {
+    transform: translateY(-35%) rotateX(0deg) rotateY(0deg);
+}
+
 .card .imagem_cover {
-    width: 100%;
-    height: 100%;
+    width: 99%;
+    height: 90%;
     transition: 0.2s ease-in-out;
     filter: drop-shadow(0 0 25px black);
 }
 
-.card:hover .moldura {
-    transform: translateY(-50%) translateX(0) rotateY(0deg);
+/* .card:hover .moldura {
+    transform: translateY(-2%) translateY(-20%) translateX(0) rotateY(0deg);
     border-radius: 10px;
-    box-shadow: 0px 0px 80px #4070f4;
-    border: 1px solid #13326E;
     background: transparent;
     backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 100px #4070f4;
+    border: 1px solid #13326E;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
     padding: 20px;
-    width: 290px;
-    height: 200px;
+    width: 80%;
+    height: 80%;
     transition: 0.2s ease-in-out;
-}
-
-.card:hover .imagem_cover {
-    width: 250px;
-}
+} */
 
 
-.moldura {
+
+.moldura_MAIA,
+.moldura_YOUTAN,
+.moldura_AAPM,
+.moldura_DEEPESG {
     transition: 0.2s ease-in-out;
     position: absolute;
     z-index: -1;
