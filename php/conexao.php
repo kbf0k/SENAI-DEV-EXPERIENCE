@@ -3,7 +3,7 @@
 $dbhost = "localhost";
 $dbuser = "root";
 $dbpassword = "";
-$dbname = "db_dev";
+$dbname = "dev_experience";
 
 $conexao = mysqli_connect($dbhost, $dbuser, $dbpassword, $dbname);
 

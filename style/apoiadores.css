@@ -314,77 +314,80 @@
 
 #LOGO_YOUTAN {
     width: var(--card-width);
-    height: var(--card-height);
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: perspective(10000px) translateY(9%) translateX(-200%) rotateX(35deg) rotateY(-11deg);
+    transform: perspective(10000px) translateY(25px) translateX(-205%) rotateX(35deg) rotateY(-11deg);
     z-index: 1;
     transition: 0.2s ease-in-out;
 }
 
 #LOGO_AAPM {
     width: var(--card-width);
-    height: var(--card-height);
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: perspective(10000px) translateY(65%) translateX(-70%) rotateX(35deg) rotateY(1deg);
+    transform: perspective(10000px) translateY(200px) translateX(-70%) rotateX(35deg);
     z-index: 3;
     transition: 0.2s ease-in-out;
 }
 
 #LOGO_DEEPESG {
     width: var(--card-width);
-    height: var(--card-height);
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: perspective(10000px) translateY(58%) translateX(90%) rotateX(35deg) rotateY(1deg);
+    transform: perspective(10000px) translateY(175px) translateX(90%) rotateX(35deg);
     z-index: 2;
     transition: 0.2s ease-in-out;
 }
 
 #LOGO_MAIA {
     width: var(--card-width);
-    height: var(--card-height);
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: perspective(10000px) translateY(28%) translateX(165%) rotateX(55deg);
+    transform: perspective(10000px) translateY(85px) translateX(175%) rotateX(35deg);
     z-index: 1;
     transition: 0.2s ease-in-out;
 }
 
-.card:hover .imagem_cover {
-    width: 220px;
-}
+
 
 .card:hover .moldura_YOUTAN {
-    transform: translateY(-45%) rotateX(0deg) rotateY(0deg);
+    transform: translateY(-35%);
 }
 
 .card:hover .moldura_AAPM {
-    transform: translateY(-25%) rotateX(0deg) rotateY(0deg);
+    transform: translateY(-35%);
 }
 
 .card:hover .moldura_DEEPESG {
-    transform: translateY(-35%) rotateX(0deg) rotateY(0deg);
+    transform: translateY(-35%);
 }
 
 .card:hover .moldura_MAIA {
-    transform: translateY(-35%) rotateX(0deg) rotateY(0deg);
+    transform: translateY(-35%);
+}
+
+.moldura_MAIA,
+.moldura_YOUTAN,
+.moldura_AAPM,
+.moldura_DEEPESG {
+    transition: 0.2s ease-in-out;
+    position: absolute;
+    z-index: -1;
+    transform: perspective(100px) translateY(-5%) rotateX(25deg) translateZ(0);
 }
 
 .card .imagem_cover {
-    width: 99%;
-    height: 90%;
+    width: 100%;
     transition: 0.2s ease-in-out;
-    filter: drop-shadow(0 0 25px black);
+    filter: drop-shadow(0 0 15px black);
 }
 
 /* .card:hover .moldura {
@@ -406,15 +409,6 @@
 
 
 
-.moldura_MAIA,
-.moldura_YOUTAN,
-.moldura_AAPM,
-.moldura_DEEPESG {
-    transition: 0.2s ease-in-out;
-    position: absolute;
-    z-index: -1;
-    transform: perspective(100px) translateY(-5%) rotateX(25deg) translateZ(0);
-}
 
 /* SECTION 2SECTION 2SECTION 2SECTION 2SECTION 2SECTION 2SECTION 2SECTION 2SECTION 2SECTION 2 */
 

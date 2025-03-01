@@ -1,11 +1,15 @@
+<?php
+include('conexao.php');
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="Pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/edicoes.css">
-    <script src="../js/edicoes.js" defer></script>
+    <link rel="stylesheet" href="../style/sobre.css">
+    <script src="../js/sobre.js" defer></script>
     <link rel="shortcut icon" href="../img/logo_x.svg" type="image/x-icon">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
@@ -29,8 +33,12 @@
                     <li class="item"><a href="edicoes.php" class="link flex"><i class="bx bx-calendar"></i><span>Edições</span></a></li>
                     <li class="item"><a href="apoiadores.php" class="link flex"><i class="bx bx-group"></i><span>Apoiadores</span></a></li>
                     <li class="item"><a href="galeira.php" class="link flex"><i class="bx bx-photo-album"></i><span>Galeria</span></a></li>
-                    <li class="item"><a href="login.php" class="link flex"><i class="bx bx-key"></i><span>Entrar</span></a></li>
-                    <!-- <li class="item"><a href="../php/login.php" class="link flex"><i class="bx bx-log-out"></i><span>Logout</span></a></li> -->
+                    <?php if (isset($_SESSION['id_sessao'])): ?>
+                        <li class="item"><a href="perfil.php" class="link flex"><i class="bx bx-user"></i><span>Meu Perfil</span></a></li>
+                        <li class="item"><a id="logout" class="link flex"><i class="bx bx-exit"></i><span>Sair</span></a></li>
+                    <?php else: ?>
+                        <li class="item"><a href="login.php" class="link flex"><i class="bx bx-key"></i><span>Entrar</span></a></li>
+                    <?php endif; ?>
                 </ul>
             </div>
         </nav>
