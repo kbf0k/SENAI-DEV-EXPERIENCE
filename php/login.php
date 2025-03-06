@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if (password_verify($senha_login, $usuario_logado['senha_usuario'])) {
                 session_start();
                 $_SESSION['id_sessao'] = $usuario_logado['id_usuario'];
-                $_SESSION['nome_sessao'] = $usuario_logado['nome_usuario'];
+                $_SESSION['tipo_sessao'] = $usuario_logado['tipo_usuario'];
                 $login_certo = true;
             } else {
                 $login_errado = true;
@@ -26,27 +26,32 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (
-        isset($_POST['nome_cadastro_digitado']) && isset($_POST['sobrenome_cadastro_digitado']) && isset($_POST['email_cadastro_digitado'])
-        && isset($_POST['criar_senha_cadastro_digitado'])
-        && isset($_POST['repetir_senha_cadastro_digitado'])
-        && isset($_POST['nascimento_cadastro_digitado'])
-        && isset($_POST['tipo_cadastro_digitado'])
-    ) {
-        $nome_cadastro = $_POST['nome_cadastro_digitado'];
-        $sobrenome_cadastro = $_POST['sobrenome_cadastro_digitado'];
+    if (isset($_POST['nome_cadastro_digitado']) && isset($_POST['sobrenome_cadastro_digitado']) && isset($_POST['email_cadastro_digitado']) && isset($_POST['criar_senha_cadastro_digitado']) && isset($_POST['repetir_senha_cadastro_digitado']) && isset($_POST['nascimento_cadastro_digitado']) && isset($_POST['tipo_cadastro_digitado'])) {
         $email_cadastro = $_POST['email_cadastro_digitado'];
-        $criar_senha_cadastro = password_hash($_POST['criar_senha_cadastro_digitado'], PASSWORD_DEFAULT);
-        $repetir_senha_cadastro = $_POST['repetir_senha_cadastro_digitado'];
-        $nascimento_cadastro = $_POST['nascimento_cadastro_digitado'];
-        $tipo_cadastro = $_POST['tipo_cadastro_digitado'];
 
-        $stmt2 = $conexao->prepare('INSERT INTO usuarios (nome_usuario,sobrenome_usuario,email_usuario,senha_usuario,nascimento_usuario,tipo_usuario) VALUES(?,?,?,?,?,?)');
-        $stmt2->bind_param('ssssss', $nome_cadastro, $sobrenome_cadastro, $email_cadastro, $criar_senha_cadastro, $nascimento_cadastro, $tipo_cadastro);
-        $stmt2->execute();
-        $result2 = $stmt2->get_result();
+        $stmt1 = $conexao->prepare('SELECT email_usuario FROM usuarios WHERE email_usuario = ?');
+        $stmt1->bind_param('s', $email_cadastro);
+        $stmt1->execute();
+        $stmt1->store_result();
 
-        $cadastro_certo = true;
+        if ($stmt1->num_rows > 0) {
+            $email_errado = true;
+        } else {
+            if ($_POST['criar_senha_cadastro_digitado'] === $_POST['repetir_senha_cadastro_digitado']) {
+                $nome_cadastro = $_POST['nome_cadastro_digitado'];
+                $sobrenome_cadastro = $_POST['sobrenome_cadastro_digitado'];
+                $criar_senha_cadastro = password_hash($_POST['criar_senha_cadastro_digitado'], PASSWORD_DEFAULT);
+                $nascimento_cadastro = $_POST['nascimento_cadastro_digitado'];
+                $tipo_cadastro = $_POST['tipo_cadastro_digitado'];
+
+                $stmt2 = $conexao->prepare('INSERT INTO usuarios (nome_usuario, sobrenome_usuario, email_usuario, senha_usuario, nascimento_usuario, tipo_usuario) VALUES (?, ?, ?, ?, ?, ?)');
+                $stmt2->bind_param('ssssss', $nome_cadastro, $sobrenome_cadastro, $email_cadastro, $criar_senha_cadastro, $nascimento_cadastro, $tipo_cadastro);
+                $stmt2->execute();
+                $cadastro_certo = true;
+            } else {
+                $senha_erradas = true;
+            }
+        }
     }
 }
 ?>
@@ -166,6 +171,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 title: "Bom trabalho!",
                 text: "Cadastro realizado com sucesso!",
                 icon: "success"
+            })
+        </script>
+
+    <?php elseif (isset($email_errado) && $email_errado): ?>
+        <script>
+            Swal.fire({
+                icon: "error",
+                title: "Cadastro inválido",
+                text: "Email já em uso",
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = 'login.php';
+                }
+            });
+        </script>
+
+    <?php elseif (isset($senha_erradas) && $senha_erradas): ?>
+        <script>
+            Swal.fire({
+                icon: "error",
+                title: "Credênciais inválidas",
+                text: "Senhas não se coinsidem",
             })
         </script>
     <?php endif; ?>

@@ -31,10 +31,13 @@ session_start();
                 <li class="item"><a href="ranking.php" class="link flex"><i class="bx bx-trophy"></i><span>Ranking</span></a></li>
                 <li class="item"><a href="edicoes.php" class="link flex"><i class="bx bx-calendar"></i><span>Edições</span></a></li>
                 <li class="item"><a href="apoiadores.php" class="link flex"><i class="bx bx-group"></i><span>Apoiadores</span></a></li>
-                <li class="item"><a href="galeira.php" class="link flex"><i class="bx bx-photo-album"></i><span>Galeria</span></a></li>
+                <li class="item"><a href="galeria.php" class="link flex"><i class="bx bx-photo-album"></i><span>Galeria</span></a></li>
                 <?php if (isset($_SESSION['id_sessao'])): ?>
                     <li class="item"><a href="perfil.php" class="link flex"><i class="bx bx-user"></i><span>Meu Perfil</span></a></li>
-                    <li class="item"><a id="logout" class="link flex"><i class="bx bx-exit"></i><span>Sair</span></a></li>
+                    <?php if (isset($_SESSION['id_sessao']) && $_SESSION['tipo_sessao'] === 'Administrador'): ?>
+                        <li class="item"><a href="administrador.php" class="link flex"><i class="bx bx-shield"></i><span>Administrador</span></a></li>
+                    <?php endif; ?>
+                    <li class="item"><a href="#" id="logout" class="link flex"><i class="bx bx-exit"></i><span>Sair</span></a></li>
                 <?php else: ?>
                     <li class="item"><a href="login.php" class="link flex"><i class="bx bx-key"></i><span>Entrar</span></a></li>
                 <?php endif; ?>
@@ -44,7 +47,7 @@ session_start();
     <main>
         <secion class="section_apoiadores">
             <!-- <img src="../img/BANNER_APOIADORES.png" id="BANNER_APOIADORES" alt=""> -->
-            <img id="fundo" src="../img/fundo_png_bom.png" alt="FUNDO_BACKGROUND">
+            <img id="fundo" src="../img/BACKGROUND_APOIADORES.png" alt="FUNDO_BACKGROUND">
             <h1>APOIADORES</h1>
             <p>Agradecemos imensamente o apoio de nossos patrocinadores, cuja contribuição foi essencial para a realização deste evento. Queremos expressar nossa profunda gratidão aos parceiros do Senai Dev Experience, que desempenharam um papel fundamental em proporcionar uma experiência enriquecedora e inspiradora para nossos alunos.</p>
             <div class="card" id="LOGO_YOUTAN">

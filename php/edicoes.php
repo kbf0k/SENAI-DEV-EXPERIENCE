@@ -32,10 +32,13 @@ session_start();
                     <li class="item"><a href="ranking.php" class="link flex"><i class="bx bx-trophy"></i><span>Ranking</span></a></li>
                     <li class="item"><a href="edicoes.php" class="link flex"><i class="bx bx-calendar"></i><span>Edições</span></a></li>
                     <li class="item"><a href="apoiadores.php" class="link flex"><i class="bx bx-group"></i><span>Apoiadores</span></a></li>
-                    <li class="item"><a href="galeira.php" class="link flex"><i class="bx bx-photo-album"></i><span>Galeria</span></a></li>
+                    <li class="item"><a href="galeria.php" class="link flex"><i class="bx bx-photo-album"></i><span>Galeria</span></a></li>
                     <?php if (isset($_SESSION['id_sessao'])): ?>
                         <li class="item"><a href="perfil.php" class="link flex"><i class="bx bx-user"></i><span>Meu Perfil</span></a></li>
-                        <li class="item"><a id="logout" class="link flex"><i class="bx bx-exit"></i><span>Sair</span></a></li>
+                        <li class="item"><a href="#" id="logout" class="link flex"><i class="bx bx-exit"></i><span>Sair</span></a></li>
+                        <?php if (isset($_SESSION['id_sessao']) && $_SESSION['tipo_sessao'] === 'Administrador'): ?>
+                            <li class="item"><a href="administrador.php" class="link flex"><i class="bx bx-shield"></i><span>Administrador</span></a></li>
+                        <?php endif; ?>
                     <?php else: ?>
                         <li class="item"><a href="login.php" class="link flex"><i class="bx bx-key"></i><span>Entrar</span></a></li>
                     <?php endif; ?>

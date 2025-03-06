@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 01/03/2025 às 01:19
+-- Tempo de geração: 06/03/2025 às 01:45
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -20,6 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `dev_experience`
 --
+
 CREATE DATABASE IF NOT EXISTS dev_experience;
 USE dev_experience;
 
@@ -109,9 +110,9 @@ CREATE TABLE `escola` (
 --
 
 INSERT INTO `escola` (`escola_id`, `escola_nome`, `escola_cfp`, `escola_cidade`, `escola_status`) VALUES
-(1, 'Escola e Faculdade F?lix Guisard', 'CFP 3.01', 'Taubat?', 1),
-(2, 'Escola Senai Santos Dumont', 'CFP 3.02', 'S?o Jos? dos Campos', 0),
-(3, 'Escola Sesi Ca?apava', 'CE 207', 'Ca?apava', 1);
+(1, 'Escola e Faculdade Félix Guisard', 'CFP 3.01', 'Taubaté', 1),
+(2, 'Escola Senai Santos Dumont', 'CFP 3.02', 'São José dos Campos', 0),
+(3, 'Escola Sesi Caçapava', 'CE 207', 'Caçapava', 1);
 
 -- --------------------------------------------------------
 
@@ -181,12 +182,7 @@ INSERT INTO `inscricoes` (`id_inscricao`, `nome_equipe_inscrito`, `nome_inscrito
 (83, 'PinschersDev', 'Cibeli Aparecida Mathias Garcia', 'cibeli.garcia7@gmail.com', '46673791896', 'Luis Augusto dos Santos Silva', 'luis.agsilva22@gmail.com', '47344009897', '', '', '', 3, 'aceito'),
 (84, 'M&X Legends', 'Geovane Affonso Lazarini Neves', 'geovaneneves068@gmail.com', '46296314884', 'Jo?o Vitor Mendes de Oliveira dos Santos', 'joao.mendes3682@gmail.com', '43759283870', '', '', '', 1, 'aceito'),
 (85, 'Team M&D', 'Maria Clara Mendes', 'mendesmariiaa18@gmail.com', '46883809848', 'Daniel Jos? Albino', 'neideciribeiro@gmail.com', '46311413876', '', '', '', 1, 'aceito'),
-(86, 'TechDynasty', 'Adriana Savio Arruda', 'adrianasavioa@gmail.com', '43629037801', 'Gustavo Rocha Borges', 'gustavotchor567@gmail.com', '46873679844', '', '', '', 1, 'aceito'),
-(87, 'DPM', 'Aluno1', 'aluno1@teste.com', '1234565432345', 'Aluno1', 'aluno1@teste.com', '2345654321234', NULL, NULL, NULL, 1, 'aceito'),
-(88, 'Gavi?es da Experience', 'Aluno1', 'aluno1@teste.com', '234565432345', 'ALuno1', 'Aluno1@teste.com', '34321234567e', NULL, NULL, NULL, 1, 'aceito'),
-(90, 'Tesouro Bin?rio', 'Aluno1', 'aluno1@teste.com', '65456789876543', 'ALuno1', 'aluno1@teste.com', '456349320334', NULL, NULL, NULL, 1, 'aceito'),
-(91, 'Dynamic Duo', 'Aluno1', 'aluno1@teste.com', '43562734637', 'Aluno1', 'aluno1@teste.com', '65434567876543', NULL, NULL, NULL, 1, 'aceito'),
-(97, 'Tribo dos Rom?nticos', 'Caio', 'caio@teste.com', '65445678982', 'Jo?o Pedro', 'joaop@teste.com', '76543456785', NULL, NULL, NULL, 3, 'aceito');
+(86, 'TechDynasty', 'Adriana Savio Arruda', 'adrianasavioa@gmail.com', '43629037801', 'Gustavo Rocha Borges', 'gustavotchor567@gmail.com', '46873679844', '', '', '', 1, 'aceito');
 
 --
 -- Acionadores `inscricoes`
@@ -247,7 +243,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `nome_usuario`, `sobrenome_usuario`, `email_usuario`, `senha_usuario`, `nascimento_usuario`, `tipo_usuario`) VALUES
-(1, 'Kaique', 'Ferreira', 'kaique1245br@gmail.com', '$2y$10$0DYFAMVAb2MljOQCQNzXJOd20dpcRKuT4djXJJwF87az/XvdVJvQO', '2007-12-08', 'Aluno');
+(1, 'Kaique', 'Ferreira', 'kaique1245br@gmail.com', '$2y$10$Txf2A/HPNBzs8DzdP.2FAOGDXchghufICEOpaSSAm38O1kQp/jFx.', '2007-12-08', 'Administrador'),
+(2, 'teste', 'ferreira', 'teste@gmail.com', '$2y$10$//7cSv5VtDFx3mjRIm7jJu4RHON.IfS5wYE2knsWe4zRWxW07lqnO', '2025-03-12', 'Aluno');
 
 --
 -- Índices para tabelas despejadas
@@ -316,7 +313,7 @@ ALTER TABLE `reset_tokens`
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restrições para tabelas despejadas

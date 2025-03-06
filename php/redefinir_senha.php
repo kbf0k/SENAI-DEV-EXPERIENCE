@@ -1,5 +1,5 @@
 <?php
-// include_once('conexao.php');
+include_once('conexao.php');
 // if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //     $nova_senha = $_POST['criar_senha'];
 //     $confirmar_senha = $_POST['repetir_senha'];
@@ -27,8 +27,9 @@
 //     }
 // }
 
-
-// action="redefinir_senha.php?token=<?php echo $_GET['token']; 
+if (basename($_SERVER['PHP_SELF']) == "redefinir_senha.php" && $_SERVER['REQUEST_METHOD'] == 'POST') {
+    echo 'OI';
+}
 ?>
 
 
