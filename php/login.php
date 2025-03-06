@@ -92,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
                 <div class="conta">
                     <a href="#" id="esqueci_senha">Esqueci senha</a>
-                    <button type="button" id="criar_aluno">Criar aluno</a>
+                    <button type="button" id="criar_aluno">Cadastrar-se</a>
                 </div>
                 <button type="submit" id="entrar_button">Entrar</button>
             </form>

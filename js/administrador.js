@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('info-2').style.left = '150px';
   document.getElementById('info-3').style.left = '2090px';
   document.getElementById('info-4').style.left = '3160px';
+  document.getElementById('info-5').style.left = '3750px';
 })
 
 document.getElementById('dashboard').addEventListener('click', () => {
@@ -81,8 +82,8 @@ document.getElementById('adicionar_imagens').addEventListener('click', () => {
 document.getElementById('ranking').addEventListener('click', () => {
   setTimeout(() => {
     document.getElementById('info-4').style.left = '-5080px';
-    document.getElementById('info-5').style.left = '-4230px';
-    document.getElementById('info-1').style.right = '1250px';
+    document.getElementById('info-5').style.left = '-3750px';
+    document.getElementById('info-1').style.right = '1550px';
     document.getElementById('info-3').style.left = '-4160px';
     document.getElementById('info-2').style.left = '-4070px';
 

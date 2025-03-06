@@ -228,7 +228,7 @@ $conexao->close();
         </div>
       </div>
       <div id="info-4">
-        <div class="adicionar_notas">
+        <div class="adicionar_imagens">
           <h1>INSERIR IMAGENS DAS EQUIPES</h1>
           <div class="notas">
             <span>Selecione a equipe:</span>
@@ -246,26 +246,48 @@ $conexao->close();
         </div>
       </div>
       <div id="info-5">
-        <div class="grafico">
-          <h1>Ranking</h1>
-          <canvas id="myChart"></canvas>
-        </div>
-        <div class="cards">
-          <div class="equipes">
-            <h1>Participantes</h1>
-            <h1>123</h1>
+        <div class="ranking">
+          <div class="ranking-final">
+            <h1>RANKING DAS EQUIPES FINALISTAS</h1>
+            <table>
+              <tr>
+                <th>Posição</th>
+                <th>Equipe</th>
+                <th>Módulo A</th>
+                <th>Módulo B</th>
+                <th>Módulo C</th>
+                <th>Total</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>TESTE</td>
+                <td>129</td>
+                <td>213</td>
+                <td>1123</td>
+                <td>131231</td>
+              </tr>
+            </table>
           </div>
-          <div class="escolas">
-            <h1>Equipes</h1>
-            <h1>31231</h1>
-          </div>
-          <div class="integrantes">
-            <h1>Escolas participando</h1>
-            <h1>312</h1>
-          </div>
-          <div class="lista">
-            <h1>Ver lista de equipes</h1>
-            <h1>12321</h1>
+          <div class="ranking-geral">
+            <h1>RANKING GERAL</h1>
+            <table>
+              <tr>
+                <th>Posição</th>
+                <th>Equipe</th>
+                <th>Módulo A</th>
+                <th>Módulo B</th>
+                <th>Módulo C</th>
+                <th>Total</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>TESTE</td>
+                <td>129</td>
+                <td>213</td>
+                <td>1123</td>
+                <td>131231</td>
+              </tr>
+            </table>
           </div>
         </div>
       </div>
