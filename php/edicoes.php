@@ -46,8 +46,21 @@ session_start();
             </div>
         </nav>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+        <h1>Mainfafafafafaf</h1>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="inicio.php">Início</a></li>
+            <li><a href="sobre.php">Sobre</a></li>
+            <li><a href="ranking.php">Ranking</a></li>
+            <li><a href="edicoes.php">Edições</a></li>
+            <li><a href="apoiadores.php">Apoiadores</a></li>
+            <li><a href="galeria.php">Galeria</a></li>
+        </ul>
+        <hr style="border: none; margin-top: 10px; height: 1px; width: 1000px; background-color:rgb(0, 166, 255);">
+        <h3>© SENAI DEV EXPERIENCE</h3>
+        <h4>O conteúdo do site não pode ser editado, copiado ou distribuído sem expressa autorização do SENAI-SP. Escola e Faculdade SENAI Félix Guisard.</h4>
+    </footer>
 </body>
-
 </html>

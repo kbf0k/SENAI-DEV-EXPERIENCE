@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
+
 * {
   margin: 0;
   padding: 0;
@@ -262,4 +263,26 @@
   #sidebar-open {
     display: block;
   }
+}
+.banner {
+  background-color: #14367a;
+  height: 250px;
+  display: flex;
+  align-items: center; 
+  justify-content: flex-end; 
+  padding-right: 10%; 
+}
+
+.banner h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 150px; 
+  color: white;
+  text-transform: uppercase; 
+  margin: 0;
+  letter-spacing: 14px;
+}
+.banner img{
+  width: 445px;
+  margin-right: 30%;
+  margin-bottom: 1%;
 }
