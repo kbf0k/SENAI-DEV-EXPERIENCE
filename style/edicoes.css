@@ -263,3 +263,30 @@
         display: block;
     }
 }
+
+main {
+    margin-left: 250px;
+}
+
+footer {
+    margin-left: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 20px;
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    gap: 50px;
+}
+
+footer ul a {
+    text-decoration: none;
+    color: white;
+}
