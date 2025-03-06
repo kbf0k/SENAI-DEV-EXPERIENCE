@@ -13,6 +13,7 @@ session_start();
     <link rel="shortcut icon" href="../img/logo_x.svg" type="image/x-icon">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <title>Sobre</title>
 </head>
 
@@ -45,6 +46,10 @@ session_start();
                 </ul>
             </div>
         </nav>
+        <div class="banner">
+            <img src="../img/image-removebg-preview (18).png" alt="">
+            <h1>Sobre</h1>
+        </div>
     </header>
     <main></main>
     <footer></footer>
