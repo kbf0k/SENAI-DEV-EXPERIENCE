@@ -264,3 +264,143 @@
     display: block;
   }
 }
+
+/* Frase de Destaque */
+#frase {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #001f3f, #00356d);
+  color: white;
+}
+
+#frase h1 {
+  font-size: 40px;
+  font-weight: bold;
+  animation: piscar 1s infinite alternate;
+}
+
+/* Animação do Texto */
+@keyframes piscar {
+  from { opacity: 1; }
+  to { opacity: 0.6; }
+}
+
+
+/* CONTAGEM REGRESSIVA */
+#contagem {
+  text-align: center;
+  padding: 50px 20px;
+  background: #00356d;
+  color: white;
+}
+
+#timer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 28px;
+}
+
+.timer-box {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 80px;
+}
+
+/* Participe da competição */
+#participe {
+  background: linear-gradient(135deg, #007BFF,  #00356d);
+  padding: 70px;
+}
+
+#container-participe {
+  background: linear-gradient(135deg, #00356d, #007BFF);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 15px;
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#participe p {
+  font-size: 18px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#participe .btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 25px;
+  font-size: 18px;
+  color: white;
+  background: #007bff83;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
+}
+#participe .btn:hover {
+  background: #0055b1;
+  transform: scale(1.05);
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.4);
+}
+
+#participe h2, #saiba-mais h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px rgba(0, 0, 0, 10);
+}
+
+/* Saiba mais */
+#saiba-mais {
+  text-align: center;
+  padding: 60px;
+  background: linear-gradient(135deg,  #00356d, #007BFF);
+}
+.container-saiba-mais {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card .img-icon {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+.card h3 {
+  color: #00356d;
+}
+
+.card a {
+  display: block;
+  margin-top: 10px;
+  color: #007BFF;
+  text-decoration: none;
+}
+.card a:hover {
+  text-decoration: underline;
+}

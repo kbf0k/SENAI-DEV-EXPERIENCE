@@ -121,3 +121,38 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// Efeito de Digitação na Frase de Destaque
+const texto = "Uma oportunidade única, um mundo de possibilidades.";
+let letra = 0;
+
+function escreverTexto() {
+    document.getElementById("destaque-texto").textContent = texto.substring(0, letra);
+    letra++;
+
+    if (letra <= texto.length) {
+        setTimeout(escreverTexto, 100);
+    }
+}
+escreverTexto();
+
+// Contagem Regressiva
+const dataEvento = new Date("2025-06-21T00:00:00").getTime();
+
+function atualizarContagem() {
+    const agora = new Date().getTime();
+    const diferenca = dataEvento - agora;
+
+    if (diferenca <= 0) {
+        document.getElementById("contagem").innerHTML = "<h2>O evento já começou!</h2>";
+        return;
+    }
+
+    document.getElementById("dias").textContent = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+    document.getElementById("horas").textContent = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    document.getElementById("minutos").textContent = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+    document.getElementById("segundos").textContent = Math.floor((diferenca % (1000 * 60)) / 1000);
+}
+
+setInterval(atualizarContagem, 1000);
+atualizarContagem();
