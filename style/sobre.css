@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
-
 * {
   margin: 0;
   padding: 0;
@@ -27,50 +26,15 @@
   width: 85px;
   background: black;
   color: white;
-  padding: 15px;
+  padding: 18px;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease;
   overflow: hidden;
+  z-index: 999;
 }
 
 .sidebar:hover {
   width: 250px;
-}
-
-/* Esconder/Mostrar logo */
-.logo.open {
-  display: none;
-}
-
-.logo.closed {
-  max-width: 45px;
-  animation: x 0.2s ease-in-out both;
-}
-
-@keyframes x {
-  0% {
-    transform: translateX(-50px);
-  }
-
-  100% {
-    transform: translateX(0px);
-  }
-}
-
-.sidebar:hover .logo.closed {
-  display: none;
-}
-
-
-.sidebar:hover .logo.open {
-  display: block;
-}
-
-#logoSidebarOpen {
-  width: 150px;
-  margin-left: 20px;
-  margin-top: 20px;
-  animation: x 0.2s ease-in-out both;
 }
 
 .sidebar.close {
@@ -80,6 +44,9 @@
 .logo_items {
   gap: 8px;
   transition: 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo_name {
@@ -115,9 +82,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 40px;
+  margin-top: 30px;
   overflow-y: auto;
-  height: calc(100% - 82px);
   transition: 1s ease-in-out;
 
 }
@@ -163,12 +129,13 @@
 
 .item {
   list-style: none;
+
 }
 
 .link {
   text-decoration: none;
   border-radius: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 7.5px;
   color: white;
 }
 
@@ -195,10 +162,10 @@
 }
 
 .link i {
-  height: 75px;
-  min-width: 55px;
+  height: 60px;
+  min-width: 50px;
   display: flex;
-  font-size: 22px;
+  font-size: 20px;
   align-items: center;
   justify-content: center;
   border-radius: 4px;
@@ -264,6 +231,7 @@
     display: block;
   }
 }
+
 /* .banner {
   background-color: #14367a;
   height: 250px;
@@ -290,64 +258,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background: #f4f4f4;
-    color: #333;
+  background: #f4f4f4;
+  color: #333;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #00356d;
-    padding: 15px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #00356d;
+  padding: 15px 10%;
 }
 
 .navbar .logo img {
-    width: 120px;
+  width: 120px;
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
 }
 
 .nav-links li {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    transition: 0.3s;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
 .nav-links a:hover,
 .nav-links .active {
-    color: #ffcc00;
+  color: #ffcc00;
 }
 
 /* Sobre */
 .sobre {
-    padding: 50px 10%;
-    text-align: center;
-    background: linear-gradient(135deg, #00356d, #012f60);
+  padding: 50px 10%;
+  text-align: center;
+  background: linear-gradient(135deg, #00356d, #012f60);
 }
+
 .sobre h1 {
-    color: #ffffff;
-    margin-bottom: 20px;
+  color: #ffffff;
+  margin-bottom: 20px;
 }
-.sobre p{
+
+.sobre p {
   color: white;
   font-size: 20px;
 }
+
 /* Módulos e Fases */
 .competicao {
   padding: 50px 10%;
@@ -364,7 +335,8 @@ body {
   margin-top: 20px;
 }
 
-.modulos, .fases {
+.modulos,
+.fases {
   flex: 1;
   min-width: 280px;
   max-width: 45%;
@@ -375,9 +347,10 @@ body {
   text-align: center;
 }
 
-.modulos h3, .fases h3 {
+.modulos h3,
+.fases h3 {
   margin-bottom: 20px;
-  font-size: 1.6em; 
+  font-size: 1.6em;
   border-bottom: 2px solid #00356d;
   padding-bottom: 10px;
 }
@@ -433,7 +406,7 @@ body {
   color: white;
 }
 
-h1{
+h1 {
   margin-bottom: 20px;
   font-size: 40px;
 }
@@ -446,6 +419,7 @@ h1{
   justify-content: center;
   width: 100%;
 }
+
 article {
   flex: 1 1 200px;
   max-width: 400px;
@@ -459,6 +433,7 @@ article {
   justify-content: space-between;
   height: 105%;
 }
+
 article:hover {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
@@ -468,6 +443,7 @@ figure {
   padding: 0;
   overflow: hidden;
 }
+
 article img {
   width: 100%;
   height: 200px;
@@ -481,6 +457,7 @@ article img {
   justify-content: space-between;
   flex-grow: 1;
 }
+
 article h2 {
   font-size: 21px;
   margin-bottom: 5px;
@@ -541,6 +518,3 @@ article p {
 .btn-download:hover {
   background-color: #002c56;
 }
-
-
-

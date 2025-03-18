@@ -26,50 +26,15 @@
   width: 85px;
   background: black;
   color: white;
-  padding: 15px;
+  padding: 18px;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease;
   overflow: hidden;
+  z-index: 999;
 }
 
 .sidebar:hover {
   width: 250px;
-}
-
-/* Esconder/Mostrar logo */
-.logo.open {
-  display: none;
-}
-
-.logo.closed {
-  max-width: 45px;
-  animation: animacao_X 0.2s ease-in-out both;
-}
-
-@keyframes animacao_X {
-  0% {
-    transform: translateX(-50px);
-  }
-
-  100% {
-    transform: translateX(0px);
-  }
-}
-
-.sidebar:hover .logo.closed {
-  display: none;
-}
-
-
-.sidebar:hover .logo.open {
-  display: block;
-}
-
-#logoSidebarOpen {
-  width: 150px;
-  margin-left: 20px;
-  margin-top: 20px;
-  animation: x 0.2s ease-in-out both;
 }
 
 .sidebar.close {
@@ -79,6 +44,9 @@
 .logo_items {
   gap: 8px;
   transition: 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo_name {
@@ -114,9 +82,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 40px;
+  margin-top: 30px;
   overflow-y: auto;
-  height: calc(100% - 82px);
   transition: 1s ease-in-out;
 
 }
@@ -168,7 +135,7 @@
 .link {
   text-decoration: none;
   border-radius: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 7.5px;
   color: white;
 }
 
@@ -195,10 +162,10 @@
 }
 
 .link i {
-  height: 75px;
-  min-width: 55px;
+  height: 60px;
+  min-width: 50px;
   display: flex;
-  font-size: 22px;
+  font-size: 20px;
   align-items: center;
   justify-content: center;
   border-radius: 4px;
@@ -281,8 +248,13 @@
 
 /* Animação do Texto */
 @keyframes piscar {
-  from { opacity: 1; }
-  to { opacity: 0.6; }
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0.6;
+  }
 }
 
 
@@ -310,7 +282,7 @@
 
 /* Participe da competição */
 #participe {
-  background: linear-gradient(135deg, #007BFF,  #00356d);
+  background: linear-gradient(135deg, #007BFF, #00356d);
   padding: 70px;
 }
 
@@ -347,13 +319,15 @@
   transition: 0.3s ease-in-out;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
 }
+
 #participe .btn:hover {
   background: #0055b1;
   transform: scale(1.05);
   box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.4);
 }
 
-#participe h2, #saiba-mais h2 {
+#participe h2,
+#saiba-mais h2 {
   font-size: 28px;
   font-weight: bold;
   color: #fff;
@@ -365,8 +339,9 @@
 #saiba-mais {
   text-align: center;
   padding: 60px;
-  background: linear-gradient(135deg,  #00356d, #007BFF);
+  background: linear-gradient(135deg, #00356d, #007BFF);
 }
+
 .container-saiba-mais {
   display: flex;
   flex-wrap: wrap;
@@ -382,15 +357,18 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
 }
+
 .card:hover {
   transform: translateY(-5px);
 }
+
 .card .img-icon {
   width: 70px;
   height: 70px;
   object-fit: contain;
   margin-bottom: 20px;
 }
+
 .card h3 {
   color: #00356d;
 }
@@ -401,6 +379,7 @@
   color: #007BFF;
   text-decoration: none;
 }
+
 .card a:hover {
   text-decoration: underline;
 }

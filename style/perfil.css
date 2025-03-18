@@ -26,50 +26,15 @@
   width: 85px;
   background: black;
   color: white;
-  padding: 15px;
+  padding: 18px;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease;
   overflow: hidden;
+  z-index: 999;
 }
 
 .sidebar:hover {
   width: 250px;
-}
-
-/* Esconder/Mostrar logo */
-.logo.open {
-  display: none;
-}
-
-.logo.closed {
-  max-width: 45px;
-  animation: animacao_X 0.2s ease-in-out both;
-}
-
-@keyframes animacao_X {
-  0% {
-    transform: translateX(-50px);
-  }
-
-  100% {
-    transform: translateX(0px);
-  }
-}
-
-.sidebar:hover .logo.closed {
-  display: none;
-}
-
-
-.sidebar:hover .logo.open {
-  display: block;
-}
-
-#logoSidebarOpen {
-  width: 150px;
-  margin-left: 20px;
-  margin-top: 20px;
-  animation: x 0.2s ease-in-out both;
 }
 
 .sidebar.close {
@@ -79,6 +44,9 @@
 .logo_items {
   gap: 8px;
   transition: 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo_name {
@@ -114,9 +82,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 40px;
+  margin-top: 30px;
   overflow-y: auto;
-  height: calc(100% - 82px);
   transition: 1s ease-in-out;
 
 }
@@ -168,7 +135,7 @@
 .link {
   text-decoration: none;
   border-radius: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 7.5px;
   color: white;
 }
 
@@ -195,10 +162,10 @@
 }
 
 .link i {
-  height: 75px;
-  min-width: 55px;
+  height: 60px;
+  min-width: 50px;
   display: flex;
-  font-size: 22px;
+  font-size: 20px;
   align-items: center;
   justify-content: center;
   border-radius: 4px;
@@ -229,6 +196,42 @@
   display: none;
 }
 
+/* Responsive */
+@media screen and (max-width: 1100px) {
+  .navbar {
+    left: 65%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .sidebar {
+    left: 0;
+    z-index: 1000;
+  }
+
+  .sidebar.close {
+    left: -100%;
+  }
+
+  #sidebar-close {
+    display: block;
+  }
+
+  #lock-icon {
+    display: none;
+  }
+
+  .navbar {
+    left: 0;
+    max-width: 100%;
+    transform: translateX(0%);
+  }
+
+  #sidebar-open {
+    display: block;
+  }
+}
+
 main {
   background: rgb(64, 119, 255);
   background: radial-gradient(circle, rgba(64, 119, 255, 1) 0%, rgba(19, 50, 110, 1) 100%);
@@ -236,7 +239,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 180dvh;
+  height: 170dvh;
 }
 
 
@@ -248,7 +251,7 @@ main {
   box-shadow: 0px 0px 100px #4070f4;
 }
 
-#imagem_perfil{
+#imagem_perfil {
   width: 250px;
   height: 250px;
   border-radius: 50%;

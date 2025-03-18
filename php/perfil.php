@@ -9,7 +9,7 @@ if (!isset($_SESSION['id_sessao'])) {
 
 $id_usuario = $_SESSION['id_sessao'];
 
-$stmt = $conexao->prepare("SELECT nome_usuario, sobrenome_usuario,email_usuario,senha_usuario,nascimento_usuario FROM usuarios WHERE id_usuario=?");
+$stmt = $conexao->prepare("SELECT nome_usuario,sobrenome_usuario,email_usuario,senha_usuario FROM usuarios WHERE id_usuario=?");
 $stmt->bind_param('i', $id_usuario);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -32,10 +32,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $nome_perfil_editar = $_POST['nome_perfil_digitado'];
       $sobrenome_perfil_editar = $_POST['sobrenome_perfil_digitado'];
       $email_perfil_editar = $_POST['email_perfil_digitado'];
-      $nascimento_perfil_editar = $_POST['nascimento_perfil_digitado'];
 
-      $stmt2 = $conexao->prepare("UPDATE usuarios SET nome_usuario=?, sobrenome_usuario=?, email_usuario=?, nascimento_usuario=? WHERE id_usuario=?");
-      $stmt2->bind_param('ssssi', $nome_perfil_editar, $sobrenome_perfil_editar, $email_perfil_editar, $nascimento_perfil_editar, $id_usuario);
+      $stmt2 = $conexao->prepare("UPDATE usuarios SET nome_usuario=?, sobrenome_usuario=?, email_usuario=?, WHERE id_usuario=?");
+      $stmt2->bind_param('sssi', $nome_perfil_editar, $sobrenome_perfil_editar, $email_perfil_editar, $id_usuario);
       $stmt2->execute();
       $edicao_sucesso = true;
 
@@ -77,10 +76,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="../js/perfil.js" defer></script>
   <title>Meu Perfil</title>
-  <style>
-
-
-  </style>
 </head>
 
 <body>
@@ -88,17 +83,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="logo_items flex">
       <span class="nav_image">
         <img id="logoSidebar" src="../img/logo_x.svg" alt="logo_fechada" class="logo closed" />
-        <img id="logoSidebarOpen" src="../img/logo_nova_certa.png" alt="logo_aberta" class="logo open" />
       </span>
     </div>
     <div class="menu_container">
       <ul class="menu_items">
-        <li class="item"><a href="inicio.php" class="link flex"><i class="bx bx-home-alt"></i><span>Início</span></a></li>
-        <li class="item"><a href="sobre.php" class="link flex"><i class="bx bx-info-circle"></i><span>Sobre</span></a></li>
-        <li class="item"><a href="ranking.php" class="link flex"><i class="bx bx-trophy"></i><span>Ranking</span></a></li>
-        <li class="item"><a href="edicoes.php" class="link flex"><i class="bx bx-calendar"></i><span>Edições</span></a></li>
-        <li class="item"><a href="apoiadores.php" class="link flex"><i class="bx bx-group"></i><span>Apoiadores</span></a></li>
-        <li class="item"><a href="galeria.php" class="link flex"><i class="bx bx-photo-album"></i><span>Galeria</span></a></li>
+        <?php if (!isset($_SESSION['id_sessao'])): ?>
+          <li class="item"><a href="inicio.php" class="link flex"><i class="bx bx-home-alt"></i><span>Início</span></a></li>
+          <li class="item" style='margin-top:25px'><a href="sobre.php" class="link flex"><i class="bx bx-info-circle"></i><span>Sobre</span></a></li>
+          <li class="item" style='margin-top:25px'><a href="ranking.php" class="link flex"><i class="bx bx-trophy"></i><span>Ranking</span></a></li>
+          <li class="item" style='margin-top:25px'><a href="edicoes.php" class="link flex"><i class="bx bx-calendar"></i><span>Edições</span></a></li>
+          <li class="item" style='margin-top:25px'><a href="apoiadores.php" class="link flex"><i class="bx bx-group"></i><span>Apoiadores</span></a></li>
+          <li class="item" style='margin-top:25px'><a href="galeria.php" class="link flex"><i class="bx bx-photo-album"></i><span>Galeria</span></a></li>
+        <?php else: ?>
+          <li class="item"><a href="inicio.php" class="link flex"><i class="bx bx-home-alt"></i><span>Início</span></a></li>
+          <li class="item"><a href="sobre.php" class="link flex"><i class="bx bx-info-circle"></i><span>Sobre</span></a></li>
+          <li class="item"><a href="ranking.php" class="link flex"><i class="bx bx-trophy"></i><span>Ranking</span></a></li>
+          <li class="item"><a href="edicoes.php" class="link flex"><i class="bx bx-calendar"></i><span>Edições</span></a></li>
+          <li class="item"><a href="apoiadores.php" class="link flex"><i class="bx bx-group"></i><span>Apoiadores</span></a></li>
+          <li class="item"><a href="galeria.php" class="link flex"><i class="bx bx-photo-album"></i><span>Galeria</span></a></li>
+        <?php endif; ?>
         <?php if (isset($_SESSION['id_sessao'])): ?>
           <li class="item"><a href="perfil.php" class="link flex"><i class="bx bx-user"></i><span>Meu Perfil</span></a></li>
           <?php if (isset($_SESSION['id_sessao']) && $_SESSION['tipo_sessao'] === 'Administrador'): ?>
@@ -106,7 +109,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           <?php endif; ?>
           <li class="item"><a href="#" id="logout" class="link flex"><i class="bx bx-exit"></i><span>Sair</span></a></li>
         <?php else: ?>
-          <li class="item"><a href="login.php" class="link flex"><i class="bx bx-key"></i><span>Entrar</span></a></li>
+          <li class="item" style='margin-top:25px'><a href="login.php" class="link flex"><i class="bx bx-key"></i><span>Entrar</span></a></li>
         <?php endif; ?>
       </ul>
     </div>
@@ -127,10 +130,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="inputbox">
           <span>Editar Sobrenome</span>
           <input type="text" name="sobrenome_perfil_digitado" value="<?php echo htmlspecialchars($usuario['sobrenome_usuario']) ?>">
-        </div>
-        <div class="inputbox">
-          <span id="nascimento">Editar Data de nascimento</span>
-          <input type="date" name="nascimento_perfil_digitado" value="<?php echo htmlspecialchars($usuario['nascimento_usuario']) ?>">
         </div>
         <div class="inputbox">
           <span>Editar Email</span>
