@@ -60,7 +60,7 @@ session_start();
     <h1 id="destaque-texto"></h1>
 
     <div id="logo-evento">
-      <img src="../img/logo_nova.png" alt="Logo do Evento" class="logo-evento-img">
+      <img src="../img/logo_correta.png" alt="Logo do Evento" class="logo-evento-img">
     </div>
   </div>
         
@@ -110,22 +110,28 @@ session_start();
         <a href="sobre.php">Ver sobre</a>
       </div>
       <div class="card">
+        <img src="../img/icon-trofeu.png" alt="Imagem Troféu" class="img-icon">
+        <h3>Ranking</h3>
+        <p>Veja classificações de anos anteriores</p>
+        <a href="ranking.php">Ver ranking</a>
+      </div>
+      <div class="card">
         <img src="../img/icon-agenda.png" alt="Imagem Edições" class="img-icon">
         <h3>Edições Anteriores</h3>
-        <p>Veja o que rolou nas ultimas edições!</p>
+        <p>Explore o que rolou nas ultimas edições</p>
         <a href="edicoes.php">Ver edições</a>
       </div>
       <div class="card">
         <img src="../img/icon-apoiadores.png" alt="Imagem Apoio" class="img-icon">
         <h3>Apoiadores</h3>
-        <p>Confira nossos apoiadores!</p>
+        <p>Descubra nossas parcerias</p>
         <a href="apoiadores.php">Ver apoiadores</a>
       </div>
       <div class="card">
         <img src="../img/icon-galeria.png" alt="Imagem Galeria" class="img-icon">
-        <h3>Galeria</h3>
-        <p>Fotos da nossa competição!</p>
-        <a href="galeria.php">Ver fotos</a>
+        <h3>Galeria de imagens</h3>
+        <p>Visite fotos da nossa competição</p>
+        <a href="galeria.php">Ver galeria</a>
       </div>
     </div>
   </section>
