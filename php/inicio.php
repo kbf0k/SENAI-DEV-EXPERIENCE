@@ -55,13 +55,18 @@ session_start();
 </nav>
 
 <body>
+  
   <div id="frase">
     <h1 id="destaque-texto"></h1>
-  </div>
 
+    <div id="logo-evento">
+      <img src="../img/logo_nova.png" alt="Logo do Evento" class="logo-evento-img">
+    </div>
+  </div>
+        
   <!-- Contagem Regressiva -->
   <section id="contagem">
-    <h2>Faltam poucos dias para a competição!</h2>
+    <h1>Faltam poucos dias para a competição!</h1>
     <div id="timer">
       <div class="timer-box">
         <span id="dias">00</span>
@@ -81,7 +86,7 @@ session_start();
       </div>
     </div>
   </section>
-
+  
   <!-- Resumo da Competição -->
   <section id="participe">
     <div id="container-participe">
@@ -92,14 +97,16 @@ session_start();
       <a href="edicoes.php" class="btn">Inscreva-se</a>
     </div>
   </section>
+  
+  <!-- <hr class="hr-separador"> -->
 
   <section id="saiba-mais">
     <h2>Descubra mais sobre nossa competição</h2>
     <div class="container-saiba-mais">
       <div class="card">
-        <img src="../img/icon-trofeu.png" alt="Imagem Troféu" class="img-icon">
+        <img src="../img/icon-sobre.png" alt="Imagem Troféu" class="img-icon">
         <h3>Quem somos?</h3>
-        <p>Confira nossa história</p>
+        <p>Confira e saiba mais sobre a história do evento</p>
         <a href="sobre.php">Ver sobre</a>
       </div>
       <div class="card">
@@ -125,11 +132,11 @@ session_start();
   <section id="habilidades">
     <h2>Aprenda, pratique e evolua suas habilidades</h2>
     <div id="habilidades_container">
-        <div class="card-habilidades">
-        <img src="../img/icon-programacao.png" alt="Programação Web" class="img-icon">
-            <h3>Programação Web</h3>
-            <p>Pratique suas habilidades em HTML, CSS e JavaScript, criando soluções web para desafios reais.</p>
-        </div>
+      <div class="card-habilidades">
+          <img src="../img/icon-programacao.png" alt="Programação Web" class="img-icon">
+              <h3>Programação Web</h3>
+              <p>Pratique suas habilidades em HTML, CSS e JavaScript, criando soluções web para desafios reais.</p>
+          </div>
         <div class="card-habilidades">
             <img src="../img/icon-equipe.png" alt="Trabalho em Equipe" class="img-icon">
             <h3>Trabalho em Equipe</h3>
