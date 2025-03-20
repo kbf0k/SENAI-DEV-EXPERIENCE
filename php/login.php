@@ -92,40 +92,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
                 <div class="conta">
                     <a href="#" id="esqueci_senha">Esqueci senha</a>
-                    <button type="button" id="criar_aluno">Cadastrar-se</a>
                 </div>
                 <button type="submit" id="entrar_button">Entrar</button>
-            </form>
-            <!-- FORMULARIO DE CADASTRAR --><!-- FORMULARIO DE CADASTRAR --><!-- FORMULARIO DE CADASTRAR -->
-            <form method="POST" id="form_cadastrar">
-                <button id="voltar_cadastrar" type="button">Voltar</button>
-                <h1>Cadastrar</h1>
-                <div class="inputbox">
-                    <input type="text" name="nome_cadastro_digitado" required>
-                    <span>Nome</span>
-                </div>
-                <div class="inputbox">
-                    <input type="text" name="sobrenome_cadastro_digitado" required>
-                    <span>Sobrenome</span>
-                </div>
-                <div class="inputbox">
-                    <input type="date" name="nascimento_cadastro_digitado" required>
-                    <span id="nascimento">Data de nascimento</span>
-                </div>
-                <div class="inputbox">
-                    <input type="email" name="email_cadastro_digitado" required>
-                    <span>Email</span>
-                </div>
-                <div class="inputbox">
-                    <input type="password" name="criar_senha_cadastro_digitado" required>
-                    <span>Criar senha</span>
-                </div>
-                <div class="inputbox">
-                    <input type="password" name="repetir_senha_cadastro_digitado" required>
-                    <span>Repetir senha</span>
-                </div>
-                <input style="display:none" type="text" name="tipo_cadastro_digitado" value="Aluno" required>
-                <button type="submit" id="criar_aluno_button">Criar aluno</button>
             </form>
             <!-- FORMULARIOD DE ESQUECI SENHA --><!-- FORMULARIOD DE ESQUECI SENHA --><!-- FORMULARIOD DE ESQUECI SENHA -->
             <form action="enviar_email.php" method="POST" id="form_esqueci_senha">

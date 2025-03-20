@@ -85,15 +85,15 @@ session_start();
             <div class="cards">
                 <div class="card_patrocinadores">
                     <h1>Agradecimentos</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere qui dolore hic magni? Fuga, perferendis explicabo dolorem fugiat, vitae saepe corporis, nam ipsa repellat eum numquam delectus voluptates earum fugit.</p>
+                    <p>O SENAIDev Experience foi um evento incrível que só se tornou possível graças ao apoio essencial de cada um dos nossos parceiros e patrocinadores. Seu compromisso e dedicação foram fundamentais para a realização deste encontro, que impactou profundamente a comunidade de desenvolvedores, proporcionando aprendizado, networking e inovação.</p>
                 </div>
                 <div class="card_patrocinadores">
                     <h1>Reconhecimento</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere qui dolore hic magni? Fuga, perferendis explicabo dolorem fugiat, vitae saepe corporis, nam ipsa repellat eum numquam delectus voluptates earum fugit.</p>
+                    <p>Reconhecemos a importância de cada contribuição, desde o incentivo financeiro até a oferta de conhecimento e oportunidades para os participantes. Seu apoio gerou um impacto significativo, inspirando novas trajetórias profissionais e fortalecendo o ecossistema tecnológico.</p>
                 </div>
                 <div class="card_patrocinadores">
-                    <h1>Sla man</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere qui dolore hic magni? Fuga, perferendis explicabo dolorem fugiat, vitae saepe corporis, nam ipsa repellat eum numquam delectus voluptates earum fugit.</p>
+                    <h1>Impacto</h1>
+                    <p>O impacto do SENAIDev Experience vai muito além do evento em si. Ele representa uma transformação na jornada de inúmeros desenvolvedores, proporcionando conhecimento, conexões valiosas e oportunidades para o futuro.</p>
                 </div>
             </div>
         </section>

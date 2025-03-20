@@ -244,7 +244,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 110dvh;
+  height: 100dvh;
 }
 
 main ul {
@@ -349,7 +349,7 @@ main .container {
   border-radius: 20px;
   padding: 20px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 13px;
   display: flex;
   justify-content: space-evenly;
@@ -549,25 +549,26 @@ main .container {
   transition: 0.5s ease-in-out;
   position: relative;
 }
+
 .options-botton {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
-  width: 100%; 
-  max-width: 500px; 
-  margin: 0 auto; 
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .options-botton div {
-  width: 100%; 
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
 .options-botton select {
-  width: 100%; 
-  padding: 8px; 
-  font-size: 16px; 
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
 }
 
 .container #info-4 .adicionar_imagens {
@@ -663,46 +664,78 @@ input[type="file"] {
 }
 
 .container #info-5 .ranking {
-  width: 700px;
-  height: 400px;
-  border: 1px solid #0d72ff;
-  box-shadow: 8px 10px 30px #0d72ff;
+  width: 1000px;
+  height: auto;
+  border: 2px solid #0d72ff;
+  box-shadow: 0 8px 20px rgba(13, 114, 255, 0.6);
   color: white;
-  background-color: #13326E;
-  border-radius: 20px;
-  padding: 50px;
+  background: linear-gradient(135deg, #13326E, #0A1E44);
+  border-radius: 15px;
+  padding: 40px;
   display: flex;
-  justify-content: space-evenly;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .container #info-5 .ranking .ranking-final,
 .container #info-5 .ranking .ranking-geral {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.container #info-5 .ranking .ranking-geral h1 {
+  margin-top: 20px;
 }
 
 .container #info-5 .ranking .ranking-final table,
 .container #info-5 .ranking .ranking-geral table {
-  background-color: rgba(70, 104, 255, 0.68);
+  background-color: rgba(70, 104, 255, 0.8);
+  box-shadow: 0 8px 20px rgba(13, 114, 255, 0.6);
+  border: 2px solid white;
   width: 100%;
-  text-align: center;
-  margin-top: 10px;
-}
-
-.container #info-5 .ranking .ranking-final tr,
-.container #info-5 .ranking .ranking-geral tr {
-  background-color: #0D274F;
+  border-collapse: collapse;
+  margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .container #info-5 .ranking .ranking-final th,
 .container #info-5 .ranking .ranking-geral th {
   background-color: #0d72ff;
+  color: white;
+  font-size: 18px;
+  padding: 12px;
+  text-transform: uppercase;
+}
+
+.container #info-5 .ranking .ranking-final tr:nth-child(odd),
+.container #info-5 .ranking .ranking-geral tr:nth-child(odd) {
+  background-color: rgba(13, 39, 79, 0.9);
+}
+
+.container #info-5 .ranking .ranking-final tr:nth-child(even),
+.container #info-5 .ranking .ranking-geral tr:nth-child(even) {
+  background-color: rgba(19, 50, 110, 0.8);
 }
 
 .container #info-5 .ranking .ranking-final td,
 .container #info-5 .ranking .ranking-geral td {
-  padding: 5px;
+  padding: 10px;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Borda arredondada apenas na parte superior */
+.container #info-5 .ranking .ranking-final th:first-child,
+.container #info-5 .ranking .ranking-geral th:first-child {
+  border-top-left-radius: 10px;
+}
+
+.container #info-5 .ranking .ranking-final th:last-child,
+.container #info-5 .ranking .ranking-geral th:last-child {
+  border-top-right-radius: 10px;
 }

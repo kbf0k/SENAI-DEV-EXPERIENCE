@@ -239,25 +239,25 @@ $conexao->close();
         <div class="adicionar_imagens">
           <h1>INSERIR IMAGENS DAS EQUIPES</h1>
           <div class="notas">
-          <div class="options-botton">
-  <div>
-    <span>Selecione o tipo:</span>
-    <select>
-      <option value="">PREMIAÇÕES</option>
-      <option value="">SELETIVAS</option>
-      <option value="">FINAIS</option>
-    </select>
-  </div>
-  <div>
-    <span>Selecione o Ano:</span>
-    <select>
-      <option value="">2022</option>
-      <option value="">2023</option>
-      <option value="">2024</option>
-      <option value="">2025</option>
-    </select>
-  </div>
-</div>
+            <div class="options-botton">
+              <div>
+                <span>Selecione o tipo:</span>
+                <select>
+                  <option value="">PREMIAÇÕES</option>
+                  <option value="">SELETIVAS</option>
+                  <option value="">FINAIS</option>
+                </select>
+              </div>
+              <div>
+                <span>Selecione o Ano:</span>
+                <select>
+                  <option value="">2022</option>
+                  <option value="">2023</option>
+                  <option value="">2024</option>
+                  <option value="">2025</option>
+                </select>
+              </div>
+            </div>
 
             <label for="botao_escolher_imagens" id="dropzone_escolher_imagens">Escolher Imagens
               <div id="imagens_escolhidas"></div>
@@ -282,11 +282,27 @@ $conexao->close();
               </tr>
               <tr>
                 <td>1</td>
-                <td>TESTE</td>
+                <td>EQUIPE 1</td>
                 <td>129</td>
                 <td>213</td>
                 <td>1123</td>
-                <td>131231</td>
+                <td>5131</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>EQUIPE 2</td>
+                <td>323</td>
+                <td>234</td>
+                <td>121</td>
+                <td>3255</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>EQUIPE 3</td>
+                <td>123</td>
+                <td>321</td>
+                <td>456</td>
+                <td>12334</td>
               </tr>
             </table>
           </div>
@@ -303,11 +319,27 @@ $conexao->close();
               </tr>
               <tr>
                 <td>1</td>
-                <td>TESTE</td>
+                <td>EQUIPE 1</td>
                 <td>129</td>
                 <td>213</td>
                 <td>1123</td>
-                <td>131231</td>
+                <td>5131</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>EQUIPE 2</td>
+                <td>323</td>
+                <td>234</td>
+                <td>121</td>
+                <td>3255</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>EQUIPE 3</td>
+                <td>123</td>
+                <td>321</td>
+                <td>456</td>
+                <td>12334</td>
               </tr>
             </table>
           </div>
