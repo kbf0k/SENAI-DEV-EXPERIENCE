@@ -1,6 +1,37 @@
 <?php
 include('conexao.php');
 session_start();
+
+// Verificar conexão
+if (!$conexao) {
+    die("Erro na conexão com o banco de dados: " . mysqli_connect_error());
+}
+
+$sql = "SELECT nome_equipe_avaliacao, 
+               nota_modulo_a_avaliacao, 
+               nota_modulo_b_avaliacao, 
+               nota_modulo_c_avaliacao, 
+               (nota_modulo_a_avaliacao + nota_modulo_b_avaliacao + nota_modulo_c_avaliacao) AS Total
+        FROM avaliacao
+        ORDER BY Total DESC LIMIT 10";
+
+$result = $conexao->query($sql);
+if (!$result) {
+    die("Erro na consulta SQL: " . $conn->error);
+}
+
+$sqlGeral = "SELECT nome_equipe_avaliacao, 
+               nota_modulo_a_avaliacao, 
+               nota_modulo_b_avaliacao, 
+               nota_modulo_c_avaliacao, 
+               (nota_modulo_a_avaliacao + nota_modulo_b_avaliacao + nota_modulo_c_avaliacao) AS Total
+        FROM avaliacao
+        ORDER BY Total DESC";
+
+$resultGeral = $conexao->query($sqlGeral);
+if (!$resultGeral) {
+    die("Erro na consulta SQL: " . $conn->error);
+}
 ?>
 
 <!DOCTYPE html>
@@ -53,7 +84,7 @@ session_start();
             </ul>
         </div>
     </nav>
-    <img class="banner" src="../img/ranking.png" alt="">
+    <img class="banner" src="../img/banner-rank.png" alt="">
     <div class="container">
         <section class="intro">
             <p>Confira aqui a classificação final do Dev Experience – Edição 2024.</p>
@@ -156,53 +187,33 @@ session_start();
             </table>
         </section>
     </div>
+    <h1 id="ranking-geral">RANKING GERAL</h1>
+    <br>
+    <br>
+    <section id="tabela-geral">
+<table border="1">
+    <tr>
+        <th>Posição</th>
+        <th>Equipe</th>
+    </tr>
+
+    <?php
+    if (isset($resultGeral) && $resultGeral->num_rows > 0) {
+        $posicaoGeral = 1;
+
+        while ($rowGeral = $resultGeral->fetch_assoc()) {
+            echo "<tr>
+            <td>{$posicaoGeral}º</td>
+            <td>{$rowGeral['nome_equipe_avaliacao']}</td>
+          </tr>";
+
+            $posicaoGeral++;
+        }
+    } else {
+        echo "<tr><td colspan='2'>Nenhuma equipe encontrada</td></tr>";
+    }
+    ?>
+</table>
+</section>
 </body>
-
 </html>
-<style>
-    .banner {
-        width: 100%;
-        height: 400px;
-    }
-
-    body {
-        background: linear-gradient(to bottom, #0a1931, #091e42);
-        color: white;
-    }
-
-    .intro {
-        margin-bottom: 50px;
-        font-size: 1.6em;
-        text-align: center;
-        margin-top: 50px;
-    }
-
-    .ranking-table {
-        display: flex;
-        justify-content: center;
-    }
-
-    table {
-        width: 50%;
-        border-collapse: collapse;
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
-        overflow: hidden;
-    }
-
-    th,
-    td {
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        padding: 15px;
-        text-align: center;
-    }
-
-    th {
-        background-color: rgba(255, 255, 255, 0.2);
-        font-size: 1.1em;
-    }
-
-    tr:nth-child(even) {
-        background-color: rgba(255, 255, 255, 0.1);
-    }
-</style>
