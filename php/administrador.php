@@ -239,12 +239,26 @@ $conexao->close();
         <div class="adicionar_imagens">
           <h1>INSERIR IMAGENS DAS EQUIPES</h1>
           <div class="notas">
-            <span>Selecione o tipo:</span>
-            <select name="" id="">
-              <option value="">PREMIAÇOES</option>
-              <option value="">SELETIVAS</option>
-              <option value="">FINAIS</option>
-            </select>
+          <div class="options-botton">
+  <div>
+    <span>Selecione o tipo:</span>
+    <select>
+      <option value="">PREMIAÇÕES</option>
+      <option value="">SELETIVAS</option>
+      <option value="">FINAIS</option>
+    </select>
+  </div>
+  <div>
+    <span>Selecione o Ano:</span>
+    <select>
+      <option value="">2022</option>
+      <option value="">2023</option>
+      <option value="">2024</option>
+      <option value="">2025</option>
+    </select>
+  </div>
+</div>
+
             <label for="botao_escolher_imagens" id="dropzone_escolher_imagens">Escolher Imagens
               <div id="imagens_escolhidas"></div>
             </label>
