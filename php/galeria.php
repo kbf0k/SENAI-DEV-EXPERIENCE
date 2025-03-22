@@ -52,7 +52,9 @@ session_start();
             </ul>
         </div>
     </nav>
-    <main></main>
+    <main>
+        <img src="../img/BANNER_GALERIA.png" id="BANNER_GALERIA" alt="BANNER_GALERIA">
+    </main>
     <footer></footer>
 </body>
 

@@ -55,7 +55,7 @@ session_start();
         </nav>
     </header>
     <main>
-        <h1>Mainfafafafafaf</h1>
+        <img src="../img/BANNER_EDIÇÕES.png" id="BANNER_EDICOES" alt="BANNER_EDIÇÕES">
     </main>
     <footer>
         <ul>

@@ -56,6 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div id="container">
             <!-- FORMULARIO DE CADASTRAR --><!-- FORMULARIO DE CADASTRAR --><!-- FORMULARIO DE CADASTRAR -->
             <form method="POST" id="form_cadastrar">
+                <a id="voltar" href="inicio.php">Voltar</a>
                 <h1>Inscrever Equipe</h1>
                 <div class="inputbox">
                     <input type="text" name="nome_equipe" required>

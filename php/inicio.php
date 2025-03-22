@@ -55,15 +55,15 @@ session_start();
 </nav>
 
 <body>
-  
+  <img src="../img/BANNER_INICIO.png" id="BANNER_INICIO" alt="BANNER_INICIO">
   <div id="frase">
     <h1 id="destaque-texto"></h1>
 
     <div id="logo-evento">
-      <img src="../img/logo_correta.png" alt="Logo do Evento" class="logo-evento-img">
+      <img src="../img/logo_nova.png" alt="Logo do Evento" class="logo-evento-img">
     </div>
   </div>
-        
+
   <!-- Contagem Regressiva -->
   <section id="contagem">
     <h1>Faltam poucos dias para a competição!</h1>
@@ -86,7 +86,7 @@ session_start();
       </div>
     </div>
   </section>
-  
+
   <!-- Resumo da Competição -->
   <section id="participe">
     <div id="container-participe">
@@ -94,10 +94,10 @@ session_start();
       <p>Uma experiência única para os alunos do curso de Desenvolvimento de Sistemas.</p>
       <p>Teste suas habilidades, trabalhe em equipe e resolva desafios reais da programação.</p>
       <p>Faça já sua participação e venha fazer parte do Senai DEV Experience!</p>
-      <a href="edicoes.php" class="btn">Inscreva-se</a>
+      <a href="inscrever.php" class="btn">Inscreva-se</a>
     </div>
   </section>
-  
+
   <!-- <hr class="hr-separador"> -->
 
   <section id="saiba-mais">
@@ -139,37 +139,37 @@ session_start();
     <h2>Aprenda, pratique e evolua suas habilidades</h2>
     <div id="habilidades_container">
       <div class="card-habilidades">
-          <img src="../img/icon-programacao.png" alt="Programação Web" class="img-icon">
-              <h3>Programação Web</h3>
-              <p>Pratique suas habilidades em HTML, CSS e JavaScript, criando soluções web para desafios reais.</p>
-          </div>
-        <div class="card-habilidades">
-            <img src="../img/icon-equipe.png" alt="Trabalho em Equipe" class="img-icon">
-            <h3>Trabalho em Equipe</h3>
-            <p>Aprenda a trabalhar com outros programadores, compartilhar ideias e desenvolver soluções em conjunto.</p>
-        </div>
-        <div class="card-habilidades">
-            <img src="../img/icon-code.png" alt="Lógica de Programação" class="img-icon">
-            <h3>Lógica de Programação</h3>
-            <p>Resolva desafios utilizando raciocínio lógico e desenvolva sua capacidade de pensar como um programador.</p>
-        </div>
-        <div class="card-habilidades">
-            <img src="../img/icon-alerta.png" alt="Resolução de Problemas" class="img-icon">
-            <h3>Resolução de Problemas</h3>
-            <p>Enfrente desafios reais, aprimore sua criatividade e encontre as melhores soluções para problemas.</p>
-        </div>
-        <div class="card-habilidades">
-            <img src="../img/icon-iot.png" alt="Soluções IoT" class="img-icon">
-            <h3>Soluções IoT</h3>
-            <p>Explore o mundo da Internet das Coisas, desenvolva sistemas inteligentes e soluções inovadoras!</p>
-        </div>
-        <div class="card-habilidades">
-            <img src="../img/icon-inovacao.png" alt="Inovação Tecnológica" class="img-icon">
-            <h3>Inovação Tecnológica</h3>
-            <p>Aprenda sobre as tecnologias emergentes e como aplicá-las para criar produtos e serviços inovadores.</p>
-        </div>
+        <img src="../img/icon-programacao.png" alt="Programação Web" class="img-icon">
+        <h3>Programação Web</h3>
+        <p>Pratique suas habilidades em HTML, CSS e JavaScript, criando soluções web para desafios reais.</p>
+      </div>
+      <div class="card-habilidades">
+        <img src="../img/icon-equipe.png" alt="Trabalho em Equipe" class="img-icon">
+        <h3>Trabalho em Equipe</h3>
+        <p>Aprenda a trabalhar com outros programadores, compartilhar ideias e desenvolver soluções em conjunto.</p>
+      </div>
+      <div class="card-habilidades">
+        <img src="../img/icon-code.png" alt="Lógica de Programação" class="img-icon">
+        <h3>Lógica de Programação</h3>
+        <p>Resolva desafios utilizando raciocínio lógico e desenvolva sua capacidade de pensar como um programador.</p>
+      </div>
+      <div class="card-habilidades">
+        <img src="../img/icon-alerta.png" alt="Resolução de Problemas" class="img-icon">
+        <h3>Resolução de Problemas</h3>
+        <p>Enfrente desafios reais, aprimore sua criatividade e encontre as melhores soluções para problemas.</p>
+      </div>
+      <div class="card-habilidades">
+        <img src="../img/icon-iot.png" alt="Soluções IoT" class="img-icon">
+        <h3>Soluções IoT</h3>
+        <p>Explore o mundo da Internet das Coisas, desenvolva sistemas inteligentes e soluções inovadoras!</p>
+      </div>
+      <div class="card-habilidades">
+        <img src="../img/icon-inovacao.png" alt="Inovação Tecnológica" class="img-icon">
+        <h3>Inovação Tecnológica</h3>
+        <p>Aprenda sobre as tecnologias emergentes e como aplicá-las para criar produtos e serviços inovadores.</p>
+      </div>
     </div>
-</section>
+  </section>
 
 </body>
 

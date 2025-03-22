@@ -13,7 +13,7 @@ session_start();
     <script src="../js/apoiadores.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <title>Apoaidores</title>
+    <title>Apoiadores</title>
 </head>
 
 <body>
@@ -54,34 +54,53 @@ session_start();
     </nav>
     <main>
         <secion class="section_apoiadores">
-            <!-- <img src="../img/BANNER_APOIADORES.png" id="BANNER_APOIADORES" alt=""> -->
-            <img id="fundo" src="../img/BACKGROUND_APOIADORES.png" alt="FUNDO_BACKGROUND">
-            <h1>APOIADORES</h1>
-            <p>Agradecemos imensamente o apoio de nossos patrocinadores, cuja contribuição foi essencial para a realização deste evento. Queremos expressar nossa profunda gratidão aos parceiros do Senai Dev Experience, que desempenharam um papel fundamental em proporcionar uma experiência enriquecedora e inspiradora para nossos alunos.</p>
-            <div class="card" id="LOGO_YOUTAN">
-                <div class="moldura_YOUTAN">
-                    <a href="https://youtan.com.br/" target="_blank"><img src="../img/LOGO_YOUTAN.svg" class="imagem_cover" alt="LOGO_YOUTAN"></a>
-                </div>
+            <img src="../img/BANNER_APOIADORES.png" id="BANNER_APOIADORES" alt="BANNER_APOIADORES">
+            <div class="apoiadores_agradecimento">
+                <h1>AGRADECIMENTO</h1>
+                <p>Agradecemos imensamente o apoio de nossos patrocinadores, cuja contribuição foi essencial para a realização deste evento. Queremos expressar nossa profunda gratidão aos parceiros do Senai Dev Experience, que desempenharam um papel fundamental em proporcionar uma experiência enriquecedora e inspiradora para nossos alunos.</p>
             </div>
-            <div class="card" id="LOGO_AAPM">
-                <div class="moldura_AAPM">
-                    <a href="https://sp.senai.br/" target="_blank"><img src="../img/LOGO_AAPM.svg" class="imagem_cover" alt="LOGO_AAPM"></a>
-                </div>
-            </div>
-            <div class="card" id="LOGO_DEEPESG">
-                <div class="moldura_DEEPESG">
-                    <a href="https://deepesg.com/" target="_blank"><img src="../img/LOGO_DEEPESG.svg" class="imagem_cover" alt="LOGO_DEEPESG"></a>
-                </div>
-            </div>
-            <div class="card" id="LOGO_MAIA">
-                <div class="moldura_MAIA">
-                    <a href="https://maia.solutions/" target="_blank"><img src="../img/LOGO_MA.IA.svg" class="imagem_cover" alt="LOGO_MA.IA"></a>
-                </div>
+            <div class="cards_apoiadores_1">
+                <a href="https://sp.senai.br/unidade/taubate/" target="_blank">
+                    <div class="card">
+                        <div class="wrapper">
+                            <div class="cover-image"></div>
+                        </div>
+                        <img src="../img/LOGO_AAPM.svg" class="title" />
+                        <p class="character">O QUE É AAPM?<br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro dolore deleniti voluptate obcaecati facere labore facilis rem. Sapiente illo est, suscipit eius nesciunt corrupti, voluptatibus porro necessitatibus eum quam natus.</p>
+                    </div>
+                </a>
+
+                <a href="https://deepesg.com/" target="_blank">
+                    <div class="card">
+                        <div class="wrapper">
+                            <div class="cover-image"></div>
+                        </div>
+                        <img src="../img/LOGO_DEEPESG.svg" class="title" />
+                        <p class="character">O QUE É DEEPESG?<br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt debitis accusantium in iure magnam fuga eos quibusdam rem necessitatibus accusamus possimus, quas alias dolore commodi repellendus esse, hic eaque non.</p>
+                    </div>
+                </a>
+                <a href="https://maia.solutions/" target="_blank">
+                    <div class="card">
+                        <div class="wrapper">
+                            <div class="cover-image"></div>
+                        </div>
+                        <img src="../img/LOGO_MA.IA.svg" class="title" />
+                        <p class="character">O QUE É MA.IA?<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci quod rerum cupiditate quasi officia dolores facere totam quos odio vitae. Voluptate facere ullam voluptates eius tempora eveniet a blanditiis ad.</p>
+                    </div>
+                </a>
+                <a href="https://youtan.com.br/" target="_blank">
+                    <div class="card">
+                        <div class="wrapper">
+                            <div class="cover-image"></div>
+                        </div>
+                        <img src="../img/LOGO_YOUTAN.svg" class="title" />
+                        <p class="character">O QUE É YOUTAN?<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci quod rerum cupiditate quasi officia dolores facere totam quos odio vitae. Voluptate facere ullam voluptates eius tempora eveniet a blanditiis ad.</p>
+                    </div>
+                </a>
             </div>
         </secion>
         <section class="patrocinadores">
             <h1>SEJA UM PATROCINADOR</h1>
-
             <div class="cards">
                 <div class="card_patrocinadores">
                     <h1>Agradecimentos</h1>
@@ -96,6 +115,7 @@ session_start();
                     <p>O impacto do SENAIDev Experience vai muito além do evento em si. Ele representa uma transformação na jornada de inúmeros desenvolvedores, proporcionando conhecimento, conexões valiosas e oportunidades para o futuro.</p>
                 </div>
             </div>
+
         </section>
     </main>
     <footer>

@@ -84,7 +84,7 @@ if (!$resultGeral) {
             </ul>
         </div>
     </nav>
-    <img class="banner" src="../img/banner-rank.png" alt="">
+    <img src="../img/BANNER_RANKING.png" id="BANNER_RANKING" alt="BANNER_RANKING">
     <div class="container">
         <section class="intro">
             <p>Confira aqui a classificação final do Dev Experience – Edição 2024.</p>
@@ -191,29 +191,30 @@ if (!$resultGeral) {
     <br>
     <br>
     <section id="tabela-geral">
-<table border="1">
-    <tr>
-        <th>Posição</th>
-        <th>Equipe</th>
-    </tr>
+        <table border="1">
+            <tr>
+                <th>Posição</th>
+                <th>Equipe</th>
+            </tr>
 
-    <?php
-    if (isset($resultGeral) && $resultGeral->num_rows > 0) {
-        $posicaoGeral = 1;
+            <?php
+            if (isset($resultGeral) && $resultGeral->num_rows > 0) {
+                $posicaoGeral = 1;
 
-        while ($rowGeral = $resultGeral->fetch_assoc()) {
-            echo "<tr>
+                while ($rowGeral = $resultGeral->fetch_assoc()) {
+                    echo "<tr>
             <td>{$posicaoGeral}º</td>
             <td>{$rowGeral['nome_equipe_avaliacao']}</td>
           </tr>";
 
-            $posicaoGeral++;
-        }
-    } else {
-        echo "<tr><td colspan='2'>Nenhuma equipe encontrada</td></tr>";
-    }
-    ?>
-</table>
-</section>
+                    $posicaoGeral++;
+                }
+            } else {
+                echo "<tr><td colspan='2'>Nenhuma equipe encontrada</td></tr>";
+            }
+            ?>
+        </table>
+    </section>
 </body>
+
 </html>

@@ -1,5 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #001224;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4070f4;
+  border-radius: 10px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -232,15 +245,16 @@
   }
 }
 
-.banner {
-  width: 1440px;
-  height: 300px;
-  margin-left: 80px;
-}
 
 body {
   background: linear-gradient(to bottom, #184CA5, #113777, #0B2550, #091D3F, #0A2148, #0A2148);
   color: white;
+  margin-left: 85px;
+}
+
+#BANNER_INICIO {
+  display: flex;
+  width: 100%;
 }
 
 .intro {
@@ -294,8 +308,9 @@ tr:nth-child(even) {
   border-collapse: collapse;
   border-radius: 10px;
   overflow: hidden;
-  
+
 }
+
 /* Responsive */
 @media screen and (max-width: 1100px) {
   .navbar {

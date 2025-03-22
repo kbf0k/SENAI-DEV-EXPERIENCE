@@ -60,6 +60,7 @@ session_start();
         </div> -->
     </header>
     <main>
+        <img src="../img/BANNER_SOBRE.png" id="BANNER_SOBRE" alt="BANNER_SOBRE">
         <section class="sobre">
             <h1>O que é o SENAI Dev Experience?</h1>
             <p>

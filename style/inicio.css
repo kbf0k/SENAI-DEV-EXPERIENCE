@@ -1,5 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #001224;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4070f4;
+  border-radius: 10px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -232,6 +245,15 @@
   }
 }
 
+body {
+  margin-left: 85px;
+}
+
+#BANNER_INICIO {
+  display: flex;
+  width: 100%;
+}
+
 #logo-evento {
   display: flex;
   justify-content: center;
@@ -240,9 +262,11 @@
 }
 
 .logo-evento-img {
-  width: 450px; /* Ajuste conforme necessário */
+  width: 450px;
+  /* Ajuste conforme necessário */
   height: auto;
-  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.5)); /* Dá um destaque */
+  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.5));
+  /* Dá um destaque */
 }
 
 /* Frase de Destaque */
@@ -260,9 +284,10 @@
   max-width: 70%;
   text-align: center;
   animation: piscar 1s infinite alternate;
-  
+
   /* Correção para centralizar */
-  display: block; /* Ou inline-block */
+  display: block;
+  /* Ou inline-block */
   margin: 0 auto;
 }
 
@@ -354,7 +379,8 @@
   box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.4);
 }
 
-#participe h2, #saiba-mais h2 {
+#participe h2,
+#saiba-mais h2 {
   font-size: 30px;
   font-weight: bold;
   color: #fff;
@@ -364,7 +390,6 @@
 
 /* Saiba mais */
 #saiba-mais {
-  margin-left: 80px;
   text-align: center;
   padding-bottom: 30px;
   background: linear-gradient(360deg, #00356d, #007BFF);
